@@ -1,0 +1,10 @@
+pandas>=2.2
+geopandas>=1.0
+shapely>=2.0
+pyproj>=3.6
+pyogrio>=0.9
+PyYAML>=6.0
+pytest>=8.0
+python-dotenv>=1.0
+psycopg[binary]>=3.2
+python-dotenv>=1.0
