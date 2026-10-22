@@ -1,0 +1,47 @@
+project:
+  name: AgenticDB-SJ
+  milestone: 1 - real-data source audit
+  geographic_scope: San Jose, California
+  snapshot_date: '2026-10-16'
+  synthetic_domain_data_allowed: false
+sources:
+- source_key: san_jose_parks
+  publisher: City of San Jose
+  dataset_name: Park
+  landing_page: https://data.sanjoseca.gov/dataset/park
+  local_file: data/raw/san_jose/parks/parks_2026-10-16.geojson
+  format: GeoJSON
+  retrieved_at: '2026-10-16'
+  size_bytes: 4125166
+  sha256: cd34c5d2756666b29a3ab6f92f586565a67d520364bcced43ebc96d260cf23d2
+  row_count: 611
+  crs: EPSG:4326
+  usage_terms: See the City of San Jose Open Data Portal terms and source metadata.
+  status: audited
+- source_key: san_jose_neighborhoods
+  publisher: City of San Jose
+  dataset_name: Neighborhoods
+  landing_page: https://data.sanjoseca.gov/dataset/neighborhoods
+  local_file: data/raw/san_jose/neighborhoods/neighborhoods_2026-10-16.geojson
+  format: GeoJSON
+  retrieved_at: '2026-10-16'
+  size_bytes: 2359163
+  sha256: e668337e85b901fbf3a34b889d0a1f67a567eeabaaa2b46bee17484e59111104
+  row_count: 297
+  crs: EPSG:4326
+  usage_terms: See the City of San Jose Open Data Portal terms and source metadata.
+  status: audited_with_geometry_repairs_required
+- source_key: california_public_schools
+  publisher: California Department of Education
+  dataset_name: Public Schools and Districts Data Files
+  landing_page: https://www.cde.ca.gov/ds/si/ds/pubschls.asp
+  local_file: data/raw/cde/public_schools/public_schools_2026-10-16.txt
+  format: tab-delimited text
+  retrieved_at: '2026-10-16'
+  size_bytes: 8795642
+  sha256: 7416f452ea14d2b887f0bd9e3a065ff32d611017f32a1841b0f5c4413e232bb3
+  row_count: 18409
+  encoding: US-ASCII compatible
+  usage_terms: See the California Department of Education data disclaimer and source
+    page.
+  status: audited
