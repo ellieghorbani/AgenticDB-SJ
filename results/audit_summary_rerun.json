@@ -1,0 +1,27 @@
+{
+  "files": {
+    "parks_sha256": "cd34c5d2756666b29a3ab6f92f586565a67d520364bcced43ebc96d260cf23d2",
+    "neighborhoods_sha256": "e668337e85b901fbf3a34b889d0a1f67a567eeabaaa2b46bee17484e59111104",
+    "schools_sha256": "7416f452ea14d2b887f0bd9e3a065ff32d611017f32a1841b0f5c4413e232bb3"
+  },
+  "parks": {
+    "rows": 611,
+    "crs": "EPSG:4326",
+    "invalid_geometries": 0,
+    "unique_facility_ids": 611
+  },
+  "neighborhoods": {
+    "rows": 297,
+    "crs": "EPSG:4326",
+    "invalid_before_repair": 11,
+    "invalid_after_repair": 0,
+    "unique_enterprise_ids": 297
+  },
+  "schools": {
+    "source_rows": 18409,
+    "unique_cds_codes": 18409,
+    "active_school_rows": 10537,
+    "active_city_san_jose": 214,
+    "active_inside_neighborhoods": 220
+  }
+}

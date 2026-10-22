@@ -1,13 +1,16 @@
-.env
-.venv/
-__pycache__/
-.pytest_cache/
-*.pyc
-
-# Processed data are reproducible outputs
-/data/processed/*
-!/data/processed/.gitkeep
-/.env
+# Secrets and local environments
 /.env
 /.venv/
-./venv/
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Downloaded source snapshots
+/data/raw/*
+!/data/raw/README.md
+
+# Reproducible processed outputs
+/data/processed/*
+!/data/processed/.gitkeep

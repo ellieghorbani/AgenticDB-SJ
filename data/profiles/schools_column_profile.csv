@@ -1,0 +1,47 @@
+dataset,column,dtype,row_count,missing_count,missing_pct,unique_nonmissing,sample_values
+schools,CDSCode,object,18409,0,0.0,18409,01100170000000 | 01100170106906 | 01100170109835 | 01100170112607 | 01100170114363
+schools,NCESDist,object,18409,1020,5.54,1184,0691051 | 0600002 | 0600003 | 0601397 | 0601770
+schools,NCESSchool,object,18409,4918,26.72,13111,10720 | 10546 | 10947 | 12013 | 12283
+schools,StatusType,object,18409,0,0.0,4,Active | Closed | Merged | Pending
+schools,County,object,18409,0,0.0,58,Alameda | Alpine | Amador | Butte | Calaveras
+schools,District,object,18409,0,0.0,1409,Alameda County Office of Education | California School for the Blind (State Special Schl) | California School for the Deaf-Fremont (State Special Schl) | Mission Valley ROC/P | Alameda Unified
+schools,School,object,18409,1394,7.57,14586,Bay Area Technology | FAME Public Charter | Downtown Oakland Science Academy | American Indian Public Charter School II | Aspire California College Preparatory Academy
+schools,Street,object,18409,287,1.56,13994,"313 West Winton Avenue | 1445 23rd Avenue | 39899 Balentine Drive, Suite 335 | 1515 Webster Street | 171 12th Street"
+schools,StreetAbr,object,18409,287,1.56,14039,"313 West Winton Ave. | 1445 23rd Ave. | 39899 Balentine Dr., Ste. 335 | 1515 Webster St. | 171 12th St."
+schools,City,object,18409,287,1.56,1147,Hayward | Oakland | Newark | Berkeley | San Leandro
+schools,Zip,object,18409,287,1.56,11479,94544-1136 | 94606 | 94560-5359 | 94612-3355 | 94607-4900
+schools,State,object,18409,287,1.56,1,CA
+schools,MailStreet,object,18409,287,1.56,12838,"313 West Winton Avenue | 1445 23rd Avenue | 39899 Balentine Drive, Suite 335 | 1515 Webster Street | 171 12th Street"
+schools,MailStrAbr,object,18409,287,1.56,12878,"313 West Winton Ave. | 1445 23rd Ave. | 39899 Balentine Dr., Ste. 335 | 1515 Webster St. | 171 12th St."
+schools,MailCity,object,18409,287,1.56,1113,Hayward | Oakland | Newark | San Leandro | Waterford
+schools,MailZip,object,18409,287,1.56,10534,94544-1136 | 94606 | 94560-5359 | 94612 | 94607-4900
+schools,MailState,object,18409,287,1.56,1,CA
+schools,Phone,object,18409,6813,37.01,10511,(510) 887-0152 | (800) 741-2287 | (510) 596-8901 | (510) 893-8701 | (510) 452-2063
+schools,Ext,object,18409,17761,96.48,488,6 | 1240 | 1200 | 1311 | 12569
+schools,FaxNumber,object,18409,7654,41.58,9828,(510) 382-9934 | (510) 596-8905 | (510) 893-0345 | (510) 452-2095 | (510) 291-9783
+schools,WebSite,object,18409,8115,44.08,6418,www.acoe.org | www.baytechschool.org | www.envisionacademy.org/ | www.aimsk12.org | Information Not Available
+schools,OpenDate,object,18409,1394,7.57,1711,08/30/2004 | 08/29/2005 | 08/28/2006 | 07/01/2007 | 08/21/2008
+schools,ClosedDate,object,18409,11935,64.83,1104,07/31/2015 | 06/30/2015 | 06/30/2026 | 06/30/2025 | 06/30/1989
+schools,Charter,object,18409,1394,7.57,2,Y | N
+schools,CharterNum,object,18409,16357,88.85,1997,0661 | 0728 | 0811 | 0882 | 1049
+schools,FundingType,object,18409,17008,92.39,3,Directly funded | Locally funded | Not in CS funding model
+schools,DOC,object,18409,0,0.0,11,00 | 31 | 42 | 54 | 56
+schools,DOCType,object,18409,0,0.0,11,County Office of Education (COE) | State Special Schools | Joint Powers Authority (JPA) | Unified School District | High School District
+schools,SOC,object,18409,1394,7.57,20,65 | 60 | 66 | 62 | 10
+schools,SOCType,object,18409,1394,7.57,20,K-12 Schools (Public) | Elementary Schools (Public) | High Schools (Public) | Intermediate/Middle Schools (Public) | County Community
+schools,EdOpsCode,object,18409,5674,30.82,14,TRAD | JUV | COMM | OPP | SPEC
+schools,EdOpsName,object,18409,5674,30.82,14,Traditional | Juvenile Court School | County Community School | Opportunity School | Special Education School
+schools,EILCode,object,18409,1394,7.57,7,ELEMHIGH | ELEM | HS | INTMIDJR | UG
+schools,EILName,object,18409,1394,7.57,7,Elementary-High Combination | Elementary | High School | Intermediate/Middle/Junior High | Ungraded
+schools,GSoffered,object,18409,3873,21.04,94,6-12 | K-12 | K-8 | 9-12 | 6-8
+schools,GSserved,object,18409,5737,31.16,85,6-12 | K-12 | K-8 | 9-12 | 6-8
+schools,Virtual,object,18409,6818,37.04,5,N | P | C | V | F
+schools,Magnet,object,18409,7083,38.48,2,N | Y
+schools,YearRoundYN,object,18409,1394,7.57,2,N | Y
+schools,FederalDFCDistrictID,object,18409,17410,94.57,999,0601827 | 0601614 | 0601880 | 0601691 | 0602013
+schools,Latitude,object,18409,4768,25.9,12224,37.658212 | 37.784279 | 37.521436 | 37.804520 | 37.800368
+schools,Longitude,object,18409,4768,25.9,12033,-122.09713 | -122.23566 | -121.99391 | -122.26815 | -122.26548
+schools,AdmFName,object,18409,6820,37.05,2709,Alysse | Seth | Justin | LaResha | Celia
+schools,AdmLName,object,18409,6820,37.05,6253,Castro | Feldman | Wells | Huffman | Pascual
+schools,LastUpDate,object,18409,0,0.0,1769,03/08/2023 | 10/13/2026 | 09/01/2015 | 08/31/2026 | 08/20/2026
+schools,Multilingual,object,18409,7990,43.4,2,N | Y

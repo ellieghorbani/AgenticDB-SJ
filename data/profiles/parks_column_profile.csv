@@ -1,0 +1,36 @@
+dataset,column,dtype,row_count,missing_count,missing_pct,unique_nonmissing,sample_values
+parks,OBJECTID,int32,611,0,0.0,611,2 | 3 | 4 | 6 | 7
+parks,FACILITYID,object,611,0,0.0,611,2 | 3 | 4 | 6 | 7
+parks,INTID,int32,611,0,0.0,611,2 | 3 | 4 | 6 | 7
+parks,GISOBJID,float64,611,201,32.9,396,2.0 | 3.0 | 4.0 | 6.0 | 7.0
+parks,NAME,object,611,0,0.0,591,Gleason Park | Bascom Community Center and Library | Cypress Community Center | West Valley Branch Library | Trace Elementary Playground
+parks,ADDRESS,object,611,52,8.51,508,1430 San Tomas Aquino Parkway | 1000 S. Bascom Ave. | 403 Cypress Ave | 1243 San Tomas Aquino Road | 651 Dana Avenue
+parks,PARKTYPE,object,611,0,0.0,23,NEIG | CC | LIBR | JU | DOG
+parks,PARKCLASS,object,611,0,0.0,5,CRP | SPS | TRAIL | RMROS | ORPHAN
+parks,SUBCLASS,object,611,0,0.0,24,NEIG | CC | LIBR | SCHOOL | REUSE
+parks,CURRENTSTATUS,object,611,0,0.0,9,Open | Closed | Design | Future Park | Construction
+parks,DATEOPENED,"datetime64[ms, UTC]",611,456,74.63,99,2013-01-01 00:00:00+00:00 | 1976-01-01 00:00:00+00:00 | 1981-01-01 00:00:00+00:00 | 1978-01-01 00:00:00+00:00 | 2004-10-20 00:00:00+00:00
+parks,DEEDDATE,"datetime64[ms, UTC]",611,562,91.98,46,2019-01-10 00:00:00+00:00 | 2017-07-01 00:00:00+00:00 | 1899-01-01 00:00:00+00:00 | 2014-06-01 00:00:00+00:00 | 2019-07-23 00:00:00+00:00
+parks,COUNCILDISTRICT,float64,611,2,0.33,10,1.0 | 6.0 | 9.0 | 3.0 | 2.0
+parks,PARKDISTRICT,float64,611,152,24.88,8,3.0 | 1.0 | 2.0 | 5.0 | 6.0
+parks,ALLACRES,float64,611,21,3.44,463,0.23 | 2.17 | 1.69 | 2.45 | 0.17
+parks,DEVACRES,float64,611,25,4.09,315,0.27 | 2.21 | 1.7 | 2.45 | 0.16
+parks,UNDEVACRES,float64,611,25,4.09,34,0.0 | 1.06 | 0.31 | 0.3915665 | 2.25
+parks,OSACRES,float64,611,29,4.75,166,0.0 | 13.86696836 | 27.39745489 | 13.53 | 0.01
+parks,WATERACRES,float64,611,27,4.42,2,0.0 | 32.4
+parks,OWNER,object,611,20,3.27,55,PRNS | PRNS / San Jose | San Jose | San Jose Unified School District | Campbell Union School District
+parks,NAMEALIAS,object,611,140,22.91,357,Gleason Park | Scottsdale Park | Booksin Elementary School - Playgrounds | Meadows Park | Parkview II Park
+parks,LOCATIONID,object,611,138,22.59,415,LOC-0496 | LOC-0680 | LOC-0056 | LOC-0220 | LOC-0183
+parks,PLANNINGAREA,object,611,24,3.93,19,West Valley | WIllow Glen | Central | Cambrian/Pioneer | Edenvale
+parks,SPPLANAREA,object,611,489,80.03,25,S. Bascom Av (North) | Stevens Creek Bl (East) | Saratoga Av | Downtown | Midtown
+parks,PANELNUMBER,object,611,42,6.87,47,98 | 82 | 97 | 128 | 113
+parks,HYPERLINK,object,611,365,59.74,223,https://www.sanjoseca.gov/Home/Components/FacilityDirectory/FacilityDirectory/2202/2028 | https://www.sanjoseca.gov/Home/Components/FacilityDirectory/FacilityDirectory/16/2028 | https://www.sanjoseca.gov/Home/Components/FacilityDirectory/FacilityDirectory/30/2028 | https://www.sanjoseca.gov/Home/Components/FacilityDirectory/FacilityDirectory/2375/2028 | https://www.sanjoseca.gov/Home/Components/FacilityDirectory/FacilityDirectory/2281/2028
+parks,ADOPTABLE,object,611,330,54.01,3,Yes | No | NA
+parks,ADOPTIONSTATUS,object,611,340,55.65,2,Available | Adopted
+parks,PARKCOUNT,object,611,341,55.81,2,Yes | R
+parks,MAINTBY,object,611,132,21.6,2,PRNS | DOT
+parks,CONTRACT,object,611,193,31.59,3,Yes | No | NA
+parks,LASTUPDATE,"datetime64[ms, UTC]",611,0,0.0,154,2026-06-02 18:38:29+00:00 | 2025-09-30 23:01:29+00:00 | 2021-03-12 19:44:32+00:00 | 2022-04-12 20:00:13+00:00 | 2025-09-30 22:55:28+00:00
+parks,SHAPE_Length,float64,611,0,0.0,611,767.9261139090977 | 1245.8244593489298 | 1122.6193037222654 | 1550.5246526034784 | 344.07175234261524
+parks,SHAPE_Area,float64,611,0,0.0,611,9837.178207737623 | 94679.78679751938 | 73527.35092128489 | 106639.56685010958 | 7524.749196034786
+parks,geometry,geometry,611,0,0.0,611,Polygon | MultiPolygon

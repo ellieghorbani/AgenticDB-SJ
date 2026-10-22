@@ -1,0 +1,12 @@
+dataset,column,dtype,row_count,missing_count,missing_pct,unique_nonmissing,sample_values
+neighborhoods,OBJECTID,int32,297,0,0.0,297,1 | 2 | 3 | 4 | 5
+neighborhoods,FACILITYID,object,297,0,0.0,297,1 | 2 | 3 | 4 | 5
+neighborhoods,INTID,int32,297,0,0.0,297,1 | 2 | 3 | 4 | 5
+neighborhoods,NAME,object,297,0,0.0,295,Canoas Garden and Almaden | Gramercy and Alexander | Farm and Rubino Dr | Mayfair | Owsley
+neighborhoods,SOURCE,object,297,183,61.62,3,Census Blockgroup | Neighborhood Assn | Fill in
+neighborhoods,LASTUPDATE,"datetime64[ms, UTC]",297,0,0.0,8,2022-05-26 14:56:41+00:00 | 2022-05-26 14:56:42+00:00 | 2024-04-24 21:20:28+00:00 | 2024-04-24 21:24:23+00:00 | 2022-05-26 14:56:43+00:00
+neighborhoods,NOTES,object,297,290,97.64,7,was Technology | was Alum Rock Hills | was Canoas Creek | was North 1st | was Little Portugal
+neighborhoods,ENTERPRISEID,object,297,0,0.0,297,REF-NEIG-0000000001 | REF-NEIG-0000000002 | REF-NEIG-0000000003 | REF-NEIG-0000000004 | REF-NEIG-0000000005
+neighborhoods,SHAPE_Length,float64,297,0,0.0,297,22588.9687737071 | 10362.37180889764 | 16203.75896925335 | 16325.544275849183 | 10550.867305385698
+neighborhoods,SHAPE_Area,float64,297,0,0.0,297,14281996.050387625 | 5324317.575820069 | 9343713.864880921 | 16250171.67221193 | 5381624.247113632
+neighborhoods,geometry,geometry,297,0,0.0,297,Polygon | MultiPolygon

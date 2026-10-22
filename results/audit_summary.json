@@ -1,0 +1,96 @@
+{
+  "snapshot_date": "2026-10-16",
+  "files": {
+    "parks": {
+      "relative_path": "data/raw/san_jose/parks/parks_2026-10-16.geojson",
+      "size_bytes": 4125166,
+      "sha256": "cd34c5d2756666b29a3ab6f92f586565a67d520364bcced43ebc96d260cf23d2"
+    },
+    "neighborhoods": {
+      "relative_path": "data/raw/san_jose/neighborhoods/neighborhoods_2026-10-16.geojson",
+      "size_bytes": 2359163,
+      "sha256": "e668337e85b901fbf3a34b889d0a1f67a567eeabaaa2b46bee17484e59111104"
+    },
+    "schools": {
+      "relative_path": "data/raw/cde/public_schools/public_schools_2026-10-16.txt",
+      "size_bytes": 8795642,
+      "sha256": "7416f452ea14d2b887f0bd9e3a065ff32d611017f32a1841b0f5c4413e232bb3"
+    }
+  },
+  "parks": {
+    "rows": 611,
+    "columns_including_geometry": 35,
+    "crs": "EPSG:4326",
+    "geometry_types": {
+      "Polygon": 553,
+      "MultiPolygon": 58
+    },
+    "valid_geometries": 611,
+    "invalid_geometries": 0,
+    "unique_facility_ids": 611,
+    "unique_names": 591,
+    "duplicate_name_values": 14,
+    "status_counts": {
+      "Open": 526,
+      "Closed": 36,
+      "Future Park": 30,
+      "Future Park (unsecured)": 9,
+      "Under Construction": 5,
+      "Design": 2,
+      "Construction": 1,
+      "Permit": 1,
+      "Seasonal": 1
+    },
+    "features_intersecting_at_least_one_neighborhood": 604,
+    "features_not_intersecting_a_neighborhood": 7,
+    "bounds_wgs84": [
+      -122.03890623,
+      37.12271836,
+      -120.0045135,
+      37.83060874
+    ]
+  },
+  "neighborhoods": {
+    "rows": 297,
+    "columns_including_geometry": 11,
+    "crs": "EPSG:4326",
+    "geometry_types": {
+      "Polygon": 274,
+      "MultiPolygon": 23
+    },
+    "valid_geometries_before_repair": 286,
+    "invalid_geometries_before_repair": 11,
+    "valid_geometries_after_make_valid": 297,
+    "unique_enterprise_ids": 297,
+    "unique_names": 295,
+    "duplicate_name_values": 2,
+    "positive_area_overlap_pairs_over_1_m2": 1,
+    "bounds_wgs84": [
+      -122.06034614,
+      37.12335092,
+      -121.66734295,
+      37.46915898
+    ]
+  },
+  "schools": {
+    "rows_statewide_all_statuses_and_entity_types": 18409,
+    "columns": 46,
+    "unique_cds_codes": 18409,
+    "duplicate_cds_codes": 0,
+    "status_counts": {
+      "Active": 11596,
+      "Closed": 5368,
+      "Merged": 1441,
+      "Pending": 4
+    },
+    "district_or_non_school_rows_school_equals_no_data": 1394,
+    "active_actual_school_rows_statewide": 10537,
+    "active_actual_school_rows_with_valid_coordinates": 10537,
+    "all_rows_with_city_san_jose": 416,
+    "active_actual_rows_with_city_san_jose": 214,
+    "active_actual_schools_spatially_inside_neighborhood_polygons": 220,
+    "active_san_jose_city_schools_not_matched_to_a_neighborhood": 0,
+    "inside_neighborhoods_with_non_san_jose_city_label": 6,
+    "schools_with_multiple_neighborhood_matches": 0
+  }
+}
