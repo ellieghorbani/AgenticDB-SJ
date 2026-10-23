@@ -1,0 +1,202 @@
+{
+  "benchmark_name": "AgenticDB-SJ Day 4 Gold SQL Benchmark",
+  "generated_at_utc": "2026-10-23T13:44:56.086019+00:00",
+  "catalog": "benchmarks/day4/query_catalog.json",
+  "queries": [
+    {
+      "id": "q01",
+      "question": "How many active public schools are located in each neighborhood?",
+      "sql_file": "sql/benchmark/q01_active_schools_per_neighborhood.sql",
+      "csv_file": "results/gold/day4/q01.csv",
+      "row_count": 297,
+      "expected_row_count": 297,
+      "columns": [
+        "neighborhood_id",
+        "neighborhood_name",
+        "active_school_count"
+      ],
+      "execution_ms": 9.365,
+      "sha256": "dc96b258e4fabd5e8d4df0758811a25f5da7545940d58c6db753df798cc55cce"
+    },
+    {
+      "id": "q02",
+      "question": "Which neighborhoods intersect the most open park-dataset features?",
+      "sql_file": "sql/benchmark/q02_open_park_features_per_neighborhood.sql",
+      "csv_file": "results/gold/day4/q02.csv",
+      "row_count": 297,
+      "expected_row_count": 297,
+      "columns": [
+        "neighborhood_id",
+        "neighborhood_name",
+        "open_park_feature_count"
+      ],
+      "execution_ms": 55.122,
+      "sha256": "9416fc28ec50e5fd8adf8f0222b356ab852a373f6c75d07f6ea95a9a1ca9d7a6"
+    },
+    {
+      "id": "q03",
+      "question": "Which active elementary schools are within one mile of an open park feature?",
+      "sql_file": "sql/benchmark/q03_elementary_schools_within_one_mile_of_open_park.sql",
+      "csv_file": "results/gold/day4/q03.csv",
+      "row_count": 131,
+      "expected_row_count": 131,
+      "columns": [
+        "cds_code",
+        "school_name",
+        "district_name",
+        "neighborhood_id",
+        "neighborhood_name",
+        "nearest_open_park_id",
+        "nearest_open_park_name",
+        "park_type_code",
+        "park_class_code",
+        "distance_meters",
+        "distance_miles"
+      ],
+      "execution_ms": 8890.695,
+      "sha256": "1dee57a5dc0928061878b0529a994a29ca4b85d2ba936403d74ccffc05ee61f3"
+    },
+    {
+      "id": "q04",
+      "question": "What is the nearest open park feature to each active school?",
+      "sql_file": "sql/benchmark/q04_nearest_open_park_per_school.sql",
+      "csv_file": "results/gold/day4/q04.csv",
+      "row_count": 220,
+      "expected_row_count": 220,
+      "columns": [
+        "cds_code",
+        "school_name",
+        "district_name",
+        "education_level_code",
+        "education_level_name",
+        "neighborhood_id",
+        "neighborhood_name",
+        "nearest_open_park_id",
+        "nearest_open_park_name",
+        "park_type_code",
+        "park_class_code",
+        "distance_meters",
+        "distance_miles"
+      ],
+      "execution_ms": 13913.32,
+      "sha256": "2ac78e38aca0a66342c8f79d9802083dfbce2c9ee291a9922891ca475bd2adc9"
+    },
+    {
+      "id": "q05",
+      "question": "Which open park features intersect the Almaden Lake neighborhood?",
+      "sql_file": "sql/benchmark/q05_open_park_features_intersecting_almaden_lake.sql",
+      "csv_file": "results/gold/day4/q05.csv",
+      "row_count": 6,
+      "expected_row_count": 6,
+      "columns": [
+        "neighborhood_id",
+        "neighborhood_name",
+        "facility_id",
+        "park_name",
+        "park_type_code",
+        "park_class_code",
+        "intersection_area_m2"
+      ],
+      "execution_ms": 11.752,
+      "sha256": "90b901e97dda8b1f378f405684a3370d928eb50940f4e02a626da69acd715130"
+    },
+    {
+      "id": "q06",
+      "question": "Which neighborhoods contain at least three active schools and two open park features?",
+      "sql_file": "sql/benchmark/q06_neighborhoods_with_three_schools_two_parks.sql",
+      "csv_file": "results/gold/day4/q06.csv",
+      "row_count": 15,
+      "expected_row_count": 15,
+      "columns": [
+        "neighborhood_id",
+        "neighborhood_name",
+        "active_school_count",
+        "open_park_feature_count"
+      ],
+      "execution_ms": 48.77,
+      "sha256": "a051efee4155bba81c3aee75f463c1ad385746e97a8ce723cb66895d46d99036"
+    },
+    {
+      "id": "q07",
+      "question": "Which active schools have no open park feature within one mile?",
+      "sql_file": "sql/benchmark/q07_schools_without_open_park_within_one_mile.sql",
+      "csv_file": "results/gold/day4/q07.csv",
+      "row_count": 0,
+      "expected_row_count": 0,
+      "columns": [
+        "cds_code",
+        "school_name",
+        "district_name",
+        "education_level_code",
+        "neighborhood_id",
+        "neighborhood_name",
+        "nearest_open_park_id",
+        "nearest_open_park_name",
+        "distance_meters",
+        "distance_miles"
+      ],
+      "execution_ms": 14111.846,
+      "sha256": "da62477fcb8519884e53512031ab43a8233426b9be2a0c97c0a8b2ebd935b8cd"
+    },
+    {
+      "id": "q08",
+      "question": "What is the average nearest-open-park distance for active schools by neighborhood?",
+      "sql_file": "sql/benchmark/q08_average_nearest_park_distance_by_neighborhood.sql",
+      "csv_file": "results/gold/day4/q08.csv",
+      "row_count": 134,
+      "expected_row_count": 134,
+      "columns": [
+        "neighborhood_id",
+        "neighborhood_name",
+        "active_school_count",
+        "average_nearest_park_distance_m",
+        "minimum_nearest_park_distance_m",
+        "maximum_nearest_park_distance_m"
+      ],
+      "execution_ms": 15872.558,
+      "sha256": "eea55c9c445e3bc32178f060c1366249cd11041784c650f7985777d101d7de6f"
+    },
+    {
+      "id": "q09",
+      "question": "Which open park features have the most active schools within one mile?",
+      "sql_file": "sql/benchmark/q09_open_parks_with_most_schools_within_one_mile.sql",
+      "csv_file": "results/gold/day4/q09.csv",
+      "row_count": 20,
+      "expected_row_count": 20,
+      "columns": [
+        "facility_id",
+        "park_name",
+        "park_type_code",
+        "park_class_code",
+        "active_school_count_within_one_mile"
+      ],
+      "execution_ms": 4358.747,
+      "sha256": "cb1b3b5854bb82c2af6c0bcbfac582ebeebaa1bfe0c01627b9f1b3c389b210a0"
+    },
+    {
+      "id": "q10",
+      "question": "Which neighborhoods contain both active elementary and active high-school records?",
+      "sql_file": "sql/benchmark/q10_neighborhoods_with_elementary_and_high_schools.sql",
+      "csv_file": "results/gold/day4/q10.csv",
+      "row_count": 18,
+      "expected_row_count": 18,
+      "columns": [
+        "neighborhood_id",
+        "neighborhood_name",
+        "elementary_school_count",
+        "high_school_count"
+      ],
+      "execution_ms": 7.78,
+      "sha256": "7c9435f9f251867e2d084f41a88dba69877c3a25b191be5492e45ee08c71c72b"
+    }
+  ],
+  "snapshot_counts": {
+    "neighborhoods": 297,
+    "parks": 611,
+    "schools": 10537,
+    "schools_in_scope": 220,
+    "open_park_features": 526
+  },
+  "status": "succeeded",
+  "failures": []
+}
