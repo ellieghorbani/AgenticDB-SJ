@@ -1,0 +1,132 @@
+cds_code,school_name,district_name,neighborhood_id,neighborhood_name,nearest_open_park_id,nearest_open_park_name,park_type_code,park_class_code,distance_meters,distance_miles
+43693776093041,Vinci Park Elementary,Berryessa Union Elementary,REF-NEIG-0000000139,Vinci Park,250,Vinci Park,NEIG,CRP,4.39,0.0027
+43696666048672,River Glen,San Jose Unified,REF-NEIG-0000000169,Palmhaven,841,Three Creeks Trail Western Alignment - Reach 4 (3CR_04),TR,TRAIL,15.01,0.0093
+43696666048748,Washington Elementary,San Jose Unified,REF-NEIG-0000000029,Guadalupe Washington,64,Brenda Lopez Memorial Plaza,NEIG,CRP,18.16,0.0113
+43694356047161,O. B. Whaley Elementary,Evergreen Elementary,REF-NEIG-0000000089,West Evergreen,211,Whaley Elementary Fields,JU,SPS,29.33,0.0182
+43695836118541,Charter School of Morgan Hill,Morgan Hill Unified,REF-NEIG-0000000293,Coyote Creek,674,Coyote Creek Parkchain - SCC,CTY,RMROS,33.88,0.0211
+43696256093066,Parkview Elementary,Oak Grove Elementary,REF-NEIG-0000000231,Park View,22,Parkview I Park,NEIG,CRP,34.86,0.0217
+43694196047039,Murdock-Portal Elementary,Cupertino Union,REF-NEIG-0000000116,Murdock,367,Murdock Park,NEIG,CRP,36.50,0.0227
+43693936046510,Blackford Elementary,Campbell Union,REF-NEIG-0000000167,South Stokes,551,Los Gatos Creek Trail - Reach 2 (LGC06),TR,TRAIL,44.74,0.0278
+43694356105787,Millbrook Elementary,Evergreen Elementary,REF-NEIG-0000000054,Quimby Oak,259,Millbrook Community Center,JU,SPS,54.02,0.0336
+43696746048870,George Mayne Elementary,Santa Clara Unified,REF-NEIG-0000000119,Alviso,167,Alviso Park,NEIG,CRP,58.44,0.0363
+43696666048698,Selma Olinder Elementary,San Jose Unified,REF-NEIG-0000000009,Olinder-McKinley,761,Selma Olinder Park,NEIG,CRP,60.51,0.0376
+43694356115851,Tom Matsumoto Elementary,Evergreen Elementary,REF-NEIG-0000000055,Chaboya,235,Fowler Creek Trail - Reach 2 (FOW02),CFD,TRAIL,62.95,0.0391
+43696666119010,Ernesto Galarza Elementary,San Jose Unified,REF-NEIG-0000000162,Tamien,47,River Glen Park,NEIG,CRP,66.09,0.0411
+43696666048565,Hammer Montessori at Gardner,San Jose Unified,REF-NEIG-0000000162,Tamien,47,River Glen Park,NEIG,CRP,66.09,0.0411
+43694356095988,John J. Montgomery Elementary,Evergreen Elementary,REF-NEIG-0000000018,Silver Creek High School,634,Brigadoon Park,NEIG,CRP,68.87,0.0428
+43693696046247,Aptitud Community Academy at Goss,Alum Rock Union Elementary,REF-NEIG-0000000012,Dobern and Capitol Park,646,Capitol Park,NEIG,CRP,68.97,0.0429
+43696666048706,Simonds Elementary,San Jose Unified,REF-NEIG-0000000223,Castillero and Simonds,149,Almaden Community Center and Library,CC,CRP,70.40,0.0437
+43694356047153,Katherine R. Smith Elementary,Evergreen Elementary,REF-NEIG-0000000040,Welch Park,170,Welch Park,NEIG,CRP,76.49,0.0475
+43693696046304,San Antonio Elementary,Alum Rock Union Elementary,REF-NEIG-0000000004,Mayfair,645,Rancho del Pueblo Golf Course,GOLF,CRP,84.53,0.0525
+43696666048656,Merritt Trace Elementary,San Jose Unified,REF-NEIG-0000000111,Rose Garden,377,Rose Garden Branch Library,LIBR,SPS,85.68,0.0532
+43693690135749,Adelante Dual Language Academy,Alum Rock Union Elementary,REF-NEIG-0000000032,Hillview,216,Hillview Branch Library,JU,SPS,90.27,0.0561
+43694350102616,Carolyn A. Clark Elementary,Evergreen Elementary,REF-NEIG-0000000053,Evergreen Valley High,441,Pocket Park No. 9,CFD,SPS,96.51,0.0600
+43693696046122,Ben Painter Elementary,Alum Rock Union Elementary,REF-NEIG-0000000020,Sheppard,405,Sheppard Middle School Track & Field,JU,SPS,99.99,0.0621
+43694356102081,Norwood Creek Elementary,Evergreen Elementary,REF-NEIG-0000000051,Norwood,860,Norwood Creek Park - Joint Use,JU,SPS,117.72,0.0732
+43104390125799,Rocketship Alma Academy,Santa Clara County Office of Education,REF-NEIG-0000000038,Alma,65,Alma Community Center,CC,CRP,119.66,0.0744
+43104390123281,Rocketship Discovery Prep,Santa Clara County Office of Education,REF-NEIG-0000000106,Wooster and East Ct and West Ct,243,Hacienda Park,NEIG,CRP,120.22,0.0747
+43104390120642,Rocketship Los Suenos Academy,Santa Clara County Office of Education,REF-NEIG-0000000019,Pink Elephant and PAL,647,Zolezzi Park,NEIG,CRP,120.91,0.0751
+43696666093082,Graystone Elementary,San Jose Unified,REF-NEIG-0000000216,Graystone,579,Carrabelle Park,NEIG,CRP,124.01,0.0771
+43104390119024,Rocketship Si Se Puede Academy,Santa Clara County Office of Education,REF-NEIG-0000000004,Mayfair,743,Lower Silver Creek (North) - Reach 09A (SCL09A),TR,TRAIL,142.70,0.0887
+43693690107748,Learning in an Urban Community with High Achievement (L.U.C.H.A.),Alum Rock Union Elementary,REF-NEIG-0000000004,Mayfair,256,Mexican Heritage Plaza,HISCU,SPS,143.07,0.0889
+43693776095350,Summerdale Elementary,Berryessa Union Elementary,REF-NEIG-0000000137,Penitencia Creek,772,Penitencia Creek Park,NEIG,CRP,149.83,0.0931
+43696176048045,Ida Jew Academies,Mount Pleasant Elementary,REF-NEIG-0000000081,Boeger and Fernish Park,261,Mount Pleasant High School Track and Field,JU,SPS,150.61,0.0936
+43693776095335,Brooktree Elementary,Berryessa Union Elementary,REF-NEIG-0000000144,Brooktree,249,Brooktree Park,NEIG,CRP,151.47,0.0941
+43694506071542,Stonegate Elementary,Franklin-McKinley Elementary,REF-NEIG-0000000056,Stonegate,713,Stonegate Park,NEIG,CRP,154.75,0.0962
+43104390113704,Rocketship Mateo Sheedy Elementary,Santa Clara County Office of Education,REF-NEIG-0000000029,Guadalupe Washington,277,Guadalupe River Trail - Reach 6a (GUA16),TR,TRAIL,156.51,0.0973
+43694196046965,Manuel De Vargas Elementary,Cupertino Union,REF-NEIG-0000000113,Mitty,61,Gullo Park,NEIG,CRP,156.54,0.0973
+43694506105795,Windmill Springs Elementary,Franklin-McKinley Elementary,REF-NEIG-0000000059,Windmill Springs,720,Windmill Springs Park,NEIG,CRP,157.85,0.0981
+43693776095343,Majestic Way Elementary,Berryessa Union Elementary,REF-NEIG-0000000130,Majestic,387,Berryessa Creek Park,NEIG,CRP,160.07,0.0995
+43696666048599,Horace Mann Elementary,San Jose Unified,REF-NEIG-0000000094,Horace Mann and SJSU,67,City Hall Plaza,CIV,SPS,160.20,0.0995
+43696256048128,Edenvale Elementary,Oak Grove Elementary,REF-NEIG-0000000050,Edenvale,144,Edenvale Youth Center,JU,SPS,160.96,0.1000
+43696176048060,Mt. Pleasant Elementary,Mount Pleasant Elementary,REF-NEIG-0000000010,Park Pleasant and Mount Pleasant,817,Mt. Pleasant Park Joint Use and Tennis Courts,JU,CRP,161.27,0.1002
+43104390127969,Discovery Charter II,Santa Clara County Office of Education,REF-NEIG-0000000189,Sakamota,147,Foothill Park,NEIG,CRP,167.93,0.1043
+43696666048730,Walter L. Bachrodt Elementary,San Jose Unified,REF-NEIG-0000000121,Rosemary,493,Rosemary Gardens Park,NEIG,CRP,169.30,0.1052
+43696740140475,Abram Agnew Elementary,Santa Clara Unified,REF-NEIG-0000000261,Coyote Creek North,889,River Oaks & Zanker,PRC,SPS,169.46,0.1053
+43696666048417,Allen at Steinbeck,San Jose Unified,REF-NEIG-0000000193,Steinbeck and Allen,518,Patty O'Malley Sports Fields,JU,SPS,170.43,0.1059
+43694356047138,Evergreen Elementary,Evergreen Elementary,REF-NEIG-0000000149,Fowler Creek,191,Tapestry Park,CFD,SPS,172.98,0.1075
+43693776046379,Noble Elementary,Berryessa Union Elementary,REF-NEIG-0000000135,Noble,389,Noble Park,NEIG,CRP,177.99,0.1106
+43694506047195,Franklin Elementary,Franklin-McKinley Elementary,REF-NEIG-0000000090,Fairground,101,Santa Clara County Fairgrounds,CTY,RMROS,182.47,0.1134
+43696666048755,Williams Elementary,San Jose Unified,REF-NEIG-0000000221,Williams,150,Glenview Park,NEIG,CRP,191.68,0.1191
+43694500123299,Rocketship Mosaic Elementary,Franklin-McKinley Elementary,REF-NEIG-0000000005,Owsley,653,McLaughlin Park,NEIG,CRP,192.29,0.1195
+43696256116081,Ledesma (Rita) Elementary,Oak Grove Elementary,REF-NEIG-0000000292,Shady Oaks and Basking Ridge,451,Basking Ridge Park,NEIG,CRP,203.85,0.1267
+43694356047146,Holly Oak Elementary,Evergreen Elementary,REF-NEIG-0000000157,Thompson Creek,271,Thompson Creek Trail - Reach 02 (THO02),TR,TRAIL,207.35,0.1288
+43693776046387,Northwood Elementary,Berryessa Union Elementary,REF-NEIG-0000000133,North Berryessa,412,Northwood Park,NEIG,CRP,208.23,0.1294
+43695836095392,Los Paseos Elementary,Morgan Hill Unified,REF-NEIG-0000000179,Los Paseos,574,Los Paseos Pathway,CFD,SPS,211.44,0.1314
+43696666048540,Grant Elementary,San Jose Unified,REF-NEIG-0000000107,Northside-Grant,68,Joyce Ellington Branch Library,LIBR,SPS,213.18,0.1325
+43696256088306,Oak Ridge Elementary,Oak Grove Elementary,REF-NEIG-0000000187,Calero and Oak Ridge,481,Calero Park,NEIG,CRP,216.30,0.1344
+43696256048102,Christopher Elementary,Oak Grove Elementary,REF-NEIG-0000000017,Hellyer,659,Melody Park,NEIG,CRP,218.13,0.1355
+43104390121483,Alpha: Cornerstone Academy Preparatory,Santa Clara County Office of Education,REF-NEIG-0000000065,Little Saigon and Spring Brook,95,Kelley Park - Vietnamese Heritage Garden,REG,CRP,233.30,0.1450
+43694506067201,Robert F. Kennedy Elementary,Franklin-McKinley Elementary,REF-NEIG-0000000005,Owsley,95,Kelley Park - Vietnamese Heritage Garden,REG,CRP,233.59,0.1451
+43696666093090,Rachel Carson Elementary,San Jose Unified,REF-NEIG-0000000232,Carson and Meadows,18,Meadows Park,NEIG,CRP,235.87,0.1466
+43693696046270,O. S. Hubbard Elementary,Alum Rock Union Elementary,REF-NEIG-0000000007,Tropicana and Lanai,820,Mariposa Park,NEIG,CRP,241.88,0.1503
+43696176067227,Valle Vista Elementary,Mount Pleasant Elementary,REF-NEIG-0000000081,Boeger and Fernish Park,179,Fernish Park,NEIG,CRP,247.36,0.1537
+43696666048763,Willow Glen Elementary,San Jose Unified,REF-NEIG-0000000171,Downtown Lincoln Ave,28,Willow Glen Branch Library,LIBR,SPS,253.94,0.1578
+43694506047245,Jeanne R. Meadows Elementary,Franklin-McKinley Elementary,REF-NEIG-0000000098,Turtle Rock and Meadows,651,Turtle Rock Park,NEIG,CRP,254.08,0.1579
+43693856046452,Farnham Charter,Cambrian,REF-NEIG-0000000196,Farnham,561,Houge Park,NEIG,CRP,254.84,0.1584
+43696256067243,Santa Teresa Elementary,Oak Grove Elementary,REF-NEIG-0000000183,Village Oaks,626,Albertson Parkway,TR,CRP,257.70,0.1601
+43696256048177,Stipe (Samuel) Elementary,Oak Grove Elementary,REF-NEIG-0000000074,Stripe Elementary and Great Oaks,661,Great Oaks Park,NEIG,CRP,257.72,0.1601
+43694356117956,James Franklin Smith Elementary,Evergreen Elementary,REF-NEIG-0000000018,Silver Creek High School,866,Silver Creek Linear Park - Picnic Meadow,NEIG,CRP,268.66,0.1669
+43696176048078,Robert Sanders Elementary,Mount Pleasant Elementary,REF-NEIG-0000000082,Mount Pleasant,261,Mount Pleasant High School Track and Field,JU,SPS,269.88,0.1677
+43694500128108,Rocketship Spark Academy,Franklin-McKinley Elementary,REF-NEIG-0000000016,Andrew Hill and Sylvandale,663,Hellyer County Park,CTY,RMROS,271.98,0.1690
+43693856046411,Bagby Elementary,Cambrian,REF-NEIG-0000000209,Bagby,550,Doerr Parkway - Reach 01 (DOR01),TR,TRAIL,283.26,0.1760
+43696256072151,Del Roble Elementary,Oak Grove Elementary,REF-NEIG-0000000195,Martial Cottle Park,520,Martial Cottle County Park,CTY,RMROS,288.88,0.1795
+43696256097430,Taylor (Bertha) Elementary,Oak Grove Elementary,REF-NEIG-0000000185,La Colina,625,La Colina Park,NEIG,CRP,289.76,0.1800
+43104390133496,Rocketship Rising Stars,Santa Clara County Office of Education,REF-NEIG-0000000016,Andrew Hill and Sylvandale,103,Andrew P. Hill High School Track & Field,JU,SPS,292.97,0.1820
+43694506047237,G. W. Hellyer Elementary,Franklin-McKinley Elementary,REF-NEIG-0000000017,Hellyer,659,Melody Park,NEIG,CRP,308.83,0.1919
+43104390131110,Rocketship Fuerza Community Prep,Santa Clara County Office of Education,REF-NEIG-0000000004,Mayfair,475,LoBue Park,NEIG,CRP,313.05,0.1945
+43696256095400,Baldwin (Julia) Elementary,Oak Grove Elementary,REF-NEIG-0000000178,Baldwin,789,Santa Teresa County Park,CTY,RMROS,326.82,0.2031
+43694356067193,Cedar Grove Elementary,Evergreen Elementary,REF-NEIG-0000000051,Norwood,797,Norwood Creek Park,NEIG,CRP,349.42,0.2171
+43694506047260,Lairon College Preparatory Academy,Franklin-McKinley Elementary,REF-NEIG-0000000042,Seven Trees and Lairon,630,Seven Trees Community Center,CC,CRP,352.14,0.2188
+43694500113662,Voices College-Bound Language Academy,Franklin-McKinley Elementary,REF-NEIG-0000000017,Hellyer,659,Melody Park,NEIG,CRP,362.20,0.2251
+43694196046908,John Muir Elementary,Cupertino Union,REF-NEIG-0000000117,Calabazas,376,Calabazas Branch Library,LIBR,SPS,364.66,0.2266
+43693690114900,Russo/McEntee Academy,Alum Rock Union Elementary,REF-NEIG-0000000087,Warm Springs,432,Alum Rock Youth Center,CC,CRP,367.28,0.2282
+43697086049357,Guadalupe Elementary,Union Elementary,REF-NEIG-0000000226,Guadalupe,586,Guadalupe Creek Trail - Reach 4 (GUC04),TR,TRAIL,375.75,0.2335
+43695750129940,Latimer,Moreland,REF-NEIG-0000000247,Moreland West,559,Hathaway Park,NEIG,CRP,377.05,0.2343
+43696666048433,Anne Darling Elementary,San Jose Unified,REF-NEIG-0000000026,Las Plumas,749,Plata Arroyo Park,NEIG,CRP,382.21,0.2375
+43694506047252,Santee Elementary,Franklin-McKinley Elementary,REF-NEIG-0000000100,Greater Santee,169,Fair Swim Center,SPRT,CRP,386.92,0.2404
+43696666048425,Almaden Elementary,San Jose Unified,REF-NEIG-0000000273,Dentwood,20,Russo Park,NEIG,CRP,390.99,0.2430
+43694506115943,"Shirakawa (George, Sr.) Elementary",Franklin-McKinley Elementary,REF-NEIG-0000000063,Spartan Keyes and Wool Creek,715,Kelley Park,REG,CRP,399.52,0.2483
+43696256099451,Hayes Elementary,Oak Grove Elementary,REF-NEIG-0000000230,Hayes,520,Martial Cottle County Park,CTY,RMROS,402.19,0.2499
+43695756047799,George C. Payne Elementary,Moreland,REF-NEIG-0000000248,San Tomas West,2,Gleason Park,NEIG,CRP,408.65,0.2539
+43695756047740,Country Lane Elementary,Moreland,REF-NEIG-0000000282,Country Lane,371,Saratoga Creek Park,NEIG,CRP,411.25,0.2555
+43104390111880,Discovery Charter,Santa Clara County Office of Education,REF-NEIG-0000000067,Starbird,6,West Valley Branch Library,LIBR,SPS,413.30,0.2568
+43693690125526,Alpha: Blanca Alvarado,Alum Rock Union Elementary,REF-NEIG-0000000008,Valley Palms,820,Mariposa Park,NEIG,CRP,415.57,0.2582
+43693936046544,Castlemont Elementary,Campbell Union,REF-NEIG-0000000110,Monroe,368,Marijane Hamann Park,NEIG,CRP,434.58,0.2700
+43697086049415,Oster Elementary,Union Elementary,REF-NEIG-0000000199,Oster,38,Butcher Park,NEIG,CRP,445.61,0.2769
+43696666048722,Hacienda Science/Environmental Magnet,San Jose Unified,REF-NEIG-0000000206,Valley View Reed,555,Paul Moore Park,NEIG,CRP,448.81,0.2789
+43693696046221,Lyndale Elementary,Alum Rock Union Elementary,REF-NEIG-0000000022,Lyndale,184,Nancy Lane Plaza,NEIG,CRP,451.14,0.2803
+43693936046601,Lynhaven Elementary,Campbell Union,REF-NEIG-0000000112,Winchester Lynnhaven,556,Starbird Park,NEIG,CRP,456.72,0.2838
+43104390129213,Alpha: Jose Hernandez,Santa Clara County Office of Education,REF-NEIG-0000000008,Valley Palms,820,Mariposa Park,NEIG,CRP,460.91,0.2864
+43696666093074,Los Alamitos Elementary,San Jose Unified,REF-NEIG-0000000213,Los Alamitos,584,Jeffery Fontana Park,NEIG,CRP,489.40,0.3041
+43696256048086,Anderson (Alex) Elementary,Oak Grove Elementary,REF-NEIG-0000000251,Blossom Valley,117,Miner Park,NEIG,CRP,497.81,0.3093
+43693850133439,Steindorf STEAM K-8 Magnet,Cambrian,REF-NEIG-0000000173,Steindorf-Doerr,9,Cambrian Branch Library,LIBR,SPS,507.90,0.3156
+43694196047005,Nelson S. Dilworth Elementary,Cupertino Union,REF-NEIG-0000000116,Murdock,467,Rainbow Park,NEIG,CRP,510.79,0.3174
+43104390132530,Voices College-Bound Language Academy at Mt. Pleasant,Santa Clara County Office of Education,REF-NEIG-0000000035,East Hills and White,817,Mt. Pleasant Park Joint Use and Tennis Courts,JU,CRP,524.78,0.3261
+43693696046320,Thomas P. Ryan Elementary,Alum Rock Union Elementary,REF-NEIG-0000000084,Kolmar and Ryan,433,Lower Silver Creek (North) - Reach 13 (SCL13),TR,TRAIL,532.89,0.3311
+43695756047831,Leroy Anderson Elementary,Moreland,REF-NEIG-0000000067,Starbird,556,Starbird Park,NEIG,CRP,536.02,0.3331
+43694506047211,Captain Jason M. Dahl Elementary,Franklin-McKinley Elementary,REF-NEIG-0000000058,Dahl,631,Solari Park,NEIG,CRP,549.68,0.3416
+43693696046213,Linda Vista Elementary,Alum Rock Union Elementary,REF-NEIG-0000000288,Linda Vista and Hillcrest,161,Fleming Park,NEIG,CRP,559.06,0.3474
+43695756047765,Easterbrook Discovery,Moreland,REF-NEIG-0000000115,Rogers,6,West Valley Branch Library,LIBR,SPS,566.28,0.3519
+43697086049373,Lietz Elementary,Union Elementary,REF-NEIG-0000000272,Kooser,386,Lone Hill Park,NEIG,CRP,580.67,0.3608
+43695426047575,Luther Burbank Elementary,Luther Burbank,REF-NEIG-0000000111,Rose Garden,383,Buena Vista Park,NEIG,CRP,607.94,0.3778
+43693936046577,Forest Hill Elementary,Campbell Union,REF-NEIG-0000000262,Forest Hill/Westmont,560,San Tomas Park,NEIG,CRP,610.29,0.3792
+43693936046676,Rosemary,Campbell Union,REF-NEIG-0000000068,Cadillac Winchester,2,Gleason Park,NEIG,CRP,625.72,0.3888
+43693936046692,Sherman Oaks Elementary,Campbell Union,REF-NEIG-0000000014,Fruitdale and Sherman Oaks,3,Bascom Community Center and Library,CC,CRP,646.99,0.4020
+43693696046254,Millard McCollam Elementary,Alum Rock Union Elementary,REF-NEIG-0000000079,Golf and Gridley,388,Cimarron Park,NEIG,CRP,663.36,0.4122
+43696250140590,Indigo,Oak Grove Elementary,REF-NEIG-0000000190,Frost and Herman,480,Comanche Park,NEIG,CRP,680.45,0.4228
+43694356111942,Silver Oak Elementary,Evergreen Elementary,REF-NEIG-0000000150,Silver Creek Country Club,724,Canyon Creek Park,NEIG,CRP,709.84,0.4411
+43696666048664,Reed Elementary,San Jose Unified,REF-NEIG-0000000202,Branham,555,Paul Moore Park,NEIG,CRP,714.00,0.4437
+43693856046445,Fammatre Elementary,Cambrian,REF-NEIG-0000000210,Cambrian,384,Doerr Park,NEIG,CRP,725.84,0.4510
+43696256048110,Frost (Earl) Elementary,Oak Grove Elementary,REF-NEIG-0000000190,Frost and Herman,480,Comanche Park,NEIG,CRP,728.00,0.4524
+43697086049316,Carlton Elementary,Union Elementary,REF-NEIG-0000000237,Carlton,464,Carolyn Norris Park,NEIG,CRP,732.70,0.4553
+43697086049407,Noddin Elementary,Union Elementary,REF-NEIG-0000000242,Noddin and Leigh,386,Lone Hill Park,NEIG,CRP,761.60,0.4732
+43696336048185,Orchard Elementary,Orchard Elementary,REF-NEIG-0000000143,Orchard,390,Gran Paradiso Park,NEIG,CRP,777.23,0.4829
+43696666048680,Schallenberger Elementary,San Jose Unified,REF-NEIG-0000000175,Schallenberger,49,Rubino Park,NEIG,CRP,790.93,0.4915
+43693776067177,Ruskin Elementary,Berryessa Union Elementary,REF-NEIG-0000000129,Piedmont Hills and St Victor,774,Cataldi Park,NEIG,CRP,813.33,0.5054
+43696666048474,Booksin Elementary,San Jose Unified,REF-NEIG-0000000160,Cherry,27,Wilcox Park,NEIG,CRP,814.30,0.5060
+43694356047120,Cadwallader Elementary,Evergreen Elementary,REF-NEIG-0000000148,Cadwallader,191,Tapestry Park,CFD,SPS,835.36,0.5191
+43104390125781,Rocketship Academy Brilliant Minds,Santa Clara County Office of Education,REF-NEIG-0000000084,Kolmar and Ryan,817,Mt. Pleasant Park Joint Use and Tennis Courts,JU,CRP,878.35,0.5458
+43696256072144,Sakamoto Elementary,Oak Grove Elementary,REF-NEIG-0000000189,Sakamota,480,Comanche Park,NEIG,CRP,999.31,0.6209
+43695756047807,Gussie M. Baker Elementary,Moreland,REF-NEIG-0000000243,Baker West,560,San Tomas Park,NEIG,CRP,1031.97,0.6412
+43697086049290,Alta Vista Elementary,Union Elementary,REF-NEIG-0000000239,Union,464,Carolyn Norris Park,NEIG,CRP,1152.12,0.7159

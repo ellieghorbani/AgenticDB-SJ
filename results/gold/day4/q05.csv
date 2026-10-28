@@ -1,0 +1,7 @@
+neighborhood_id,neighborhood_name,facility_id,park_name,park_type_code,park_class_code,intersection_area_m2
+REF-NEIG-0000000194,Almaden Lake,583,Almaden Lake Park,REG,CRP,253972.29
+REF-NEIG-0000000194,Almaden Lake,792,Los Alamitos Creek Trail - Reach 1 (LAC01),TR,TRAIL,29180.58
+REF-NEIG-0000000194,Almaden Lake,795,Los Alamitos Creek Trail - Reach 2 (LAC02),TR,TRAIL,28059.90
+REF-NEIG-0000000194,Almaden Lake,589,Almaden Lake Park - Yard,REG,CRP,6245.55
+REF-NEIG-0000000194,Almaden Lake,328,Guadalupe River Trail - Reach 13 (GUA28),TR,TRAIL,584.05
+REF-NEIG-0000000194,Almaden Lake,877,Guadalupe River Trail - Reach 13B (GUA28B),TR,TRAIL,534.26
