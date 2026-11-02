@@ -21,9 +21,9 @@ def create_app() -> FastAPI:
         title=settings.app_name,
         version=settings.app_version,
         description=(
-            "Read-only relational and PostGIS API over the fixed AgenticDB-SJ "
-            "public-data snapshot. The natural-language agent is intentionally "
-            "not part of Day 5."
+            "Read-only relational and PostGIS API with Day 6 allowlisted schema "
+            "retrieval and typed query planning. The planner does not generate or "
+            "execute SQL; LLM-based generation is intentionally deferred."
         ),
     )
 
