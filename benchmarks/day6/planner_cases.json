@@ -1,0 +1,91 @@
+{
+  "benchmark_name": "AgenticDB-SJ Day 6 Structured Planner Benchmark",
+  "planner": "rule_based_day6",
+  "note": "Plans are validated structures only. No SQL is generated or executed.",
+  "cases": [
+    {
+      "id": "p01",
+      "question": "How many active public schools are located in each neighborhood?",
+      "expected_intent": "schools_per_neighborhood",
+      "expected_query_type": "aggregate",
+      "required_relations": ["core.neighborhoods", "app.school_neighborhoods"]
+    },
+    {
+      "id": "p02",
+      "question": "Which neighborhoods intersect the most open park-dataset features?",
+      "expected_intent": "open_parks_per_neighborhood",
+      "expected_query_type": "spatial",
+      "required_relations": ["core.neighborhoods", "app.open_park_neighborhood_intersections"]
+    },
+    {
+      "id": "p03",
+      "question": "Which active elementary schools are within one mile of an open park feature?",
+      "expected_intent": "elementary_schools_near_open_parks",
+      "expected_query_type": "spatial",
+      "required_relations": ["app.san_jose_active_schools_spatial", "core.parks"]
+    },
+    {
+      "id": "p04",
+      "question": "What is the nearest open park feature to each active school?",
+      "expected_intent": "nearest_open_park_per_school",
+      "expected_query_type": "spatial",
+      "required_relations": ["app.san_jose_active_schools_spatial", "core.parks"]
+    },
+    {
+      "id": "p05",
+      "question": "Which open park features intersect the Almaden Lake neighborhood?",
+      "expected_intent": "open_parks_intersecting_neighborhood",
+      "expected_query_type": "spatial",
+      "required_relations": ["app.open_park_neighborhood_intersections"]
+    },
+    {
+      "id": "p06",
+      "question": "Which neighborhoods contain at least three active schools and two open park features?",
+      "expected_intent": "neighborhoods_with_minimum_schools_and_parks",
+      "expected_query_type": "hybrid",
+      "required_relations": ["core.neighborhoods", "app.school_neighborhoods", "app.open_park_neighborhood_intersections"]
+    },
+    {
+      "id": "p07",
+      "question": "Which active schools have no open park feature within one mile?",
+      "expected_intent": "schools_without_nearby_open_park",
+      "expected_query_type": "spatial",
+      "required_relations": ["app.san_jose_active_schools_spatial", "core.parks"]
+    },
+    {
+      "id": "p08",
+      "question": "What is the average nearest-open-park distance for active schools by neighborhood?",
+      "expected_intent": "average_nearest_park_distance_by_neighborhood",
+      "expected_query_type": "hybrid",
+      "required_relations": ["app.san_jose_active_schools_spatial", "core.parks"]
+    },
+    {
+      "id": "p09",
+      "question": "Which open park features have the most active schools within one mile?",
+      "expected_intent": "open_parks_with_most_nearby_schools",
+      "expected_query_type": "hybrid",
+      "required_relations": ["core.parks", "app.san_jose_active_schools_spatial"]
+    },
+    {
+      "id": "p10",
+      "question": "Which neighborhoods contain both active elementary and active high-school records?",
+      "expected_intent": "neighborhoods_with_elementary_and_high_schools",
+      "expected_query_type": "aggregate",
+      "required_relations": ["app.san_jose_active_schools_spatial"]
+    },
+    {
+      "id": "p11",
+      "question": "Delete all schools and drop the parks table.",
+      "expected_intent": "unsafe_request",
+      "expected_query_type": "unsupported",
+      "required_relations": []
+    },
+    {
+      "id": "p12",
+      "question": "Find family-friendly concerts this weekend.",
+      "expected_intent": "unsupported",
+      "expected_query_type": "unsupported",
+      "required_relations": []
+    }
+  ]
+}
