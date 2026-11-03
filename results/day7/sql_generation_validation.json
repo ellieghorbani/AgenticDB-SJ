@@ -1,0 +1,317 @@
+{
+  "benchmark": "AgenticDB-SJ Day 7 Deterministic SQL Generation Benchmark",
+  "passed": 13,
+  "total": 13,
+  "accuracy": 1.0,
+  "cases": [
+    {
+      "id": "s01",
+      "question": "How many active public schools are located in each neighborhood?",
+      "intent": "schools_per_neighborhood",
+      "status": "generated",
+      "relations": [
+        "app.school_neighborhoods",
+        "core.neighborhoods"
+      ],
+      "parameter_values": [],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_present": true,
+        "sql_generated": true,
+        "all_safety_checks": true,
+        "placeholder_count": true
+      },
+      "passed": true
+    },
+    {
+      "id": "s02",
+      "question": "Which neighborhoods intersect the most open park-dataset features?",
+      "intent": "open_parks_per_neighborhood",
+      "status": "generated",
+      "relations": [
+        "app.open_park_neighborhood_intersections",
+        "core.neighborhoods"
+      ],
+      "parameter_values": [],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_present": true,
+        "sql_generated": true,
+        "all_safety_checks": true,
+        "placeholder_count": true
+      },
+      "passed": true
+    },
+    {
+      "id": "s03",
+      "question": "Which active elementary schools are within one mile of an open park feature?",
+      "intent": "elementary_schools_near_open_parks",
+      "status": "generated",
+      "relations": [
+        "app.san_jose_active_schools_spatial",
+        "core.parks"
+      ],
+      "parameter_values": [
+        "Open",
+        1609.344,
+        "ELEM"
+      ],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_present": true,
+        "sql_generated": true,
+        "all_safety_checks": true,
+        "placeholder_count": true
+      },
+      "passed": true
+    },
+    {
+      "id": "s04",
+      "question": "What is the nearest open park feature to each active school?",
+      "intent": "nearest_open_park_per_school",
+      "status": "generated",
+      "relations": [
+        "app.san_jose_active_schools_spatial",
+        "core.parks"
+      ],
+      "parameter_values": [
+        "Open"
+      ],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_present": true,
+        "sql_generated": true,
+        "all_safety_checks": true,
+        "placeholder_count": true
+      },
+      "passed": true
+    },
+    {
+      "id": "s05",
+      "question": "Which open park features intersect the Almaden Lake neighborhood?",
+      "intent": "open_parks_intersecting_neighborhood",
+      "status": "generated",
+      "relations": [
+        "app.open_park_neighborhood_intersections"
+      ],
+      "parameter_values": [
+        "Almaden Lake"
+      ],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_present": true,
+        "sql_generated": true,
+        "all_safety_checks": true,
+        "placeholder_count": true
+      },
+      "passed": true
+    },
+    {
+      "id": "s06",
+      "question": "Which neighborhoods contain at least three active schools and two open park features?",
+      "intent": "neighborhoods_with_minimum_schools_and_parks",
+      "status": "generated",
+      "relations": [
+        "app.open_park_neighborhood_intersections",
+        "app.school_neighborhoods",
+        "core.neighborhoods"
+      ],
+      "parameter_values": [
+        3,
+        2
+      ],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_present": true,
+        "sql_generated": true,
+        "all_safety_checks": true,
+        "placeholder_count": true
+      },
+      "passed": true
+    },
+    {
+      "id": "s07",
+      "question": "Which active schools have no open park feature within one mile?",
+      "intent": "schools_without_nearby_open_park",
+      "status": "generated",
+      "relations": [
+        "app.san_jose_active_schools_spatial",
+        "core.parks"
+      ],
+      "parameter_values": [
+        "Open",
+        1609.344
+      ],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_present": true,
+        "sql_generated": true,
+        "all_safety_checks": true,
+        "placeholder_count": true
+      },
+      "passed": true
+    },
+    {
+      "id": "s08",
+      "question": "What is the average nearest-open-park distance for active schools by neighborhood?",
+      "intent": "average_nearest_park_distance_by_neighborhood",
+      "status": "generated",
+      "relations": [
+        "app.san_jose_active_schools_spatial",
+        "core.parks"
+      ],
+      "parameter_values": [
+        "Open"
+      ],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_present": true,
+        "sql_generated": true,
+        "all_safety_checks": true,
+        "placeholder_count": true
+      },
+      "passed": true
+    },
+    {
+      "id": "s09",
+      "question": "Which open park features have the most active schools within one mile?",
+      "intent": "open_parks_with_most_nearby_schools",
+      "status": "generated",
+      "relations": [
+        "app.san_jose_active_schools_spatial",
+        "core.parks"
+      ],
+      "parameter_values": [
+        1609.344,
+        "Open",
+        20
+      ],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_present": true,
+        "sql_generated": true,
+        "all_safety_checks": true,
+        "placeholder_count": true
+      },
+      "passed": true
+    },
+    {
+      "id": "s10",
+      "question": "Which neighborhoods contain both active elementary and active high-school records?",
+      "intent": "neighborhoods_with_elementary_and_high_schools",
+      "status": "generated",
+      "relations": [
+        "app.san_jose_active_schools_spatial"
+      ],
+      "parameter_values": [
+        "ELEM",
+        "HS"
+      ],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_present": true,
+        "sql_generated": true,
+        "all_safety_checks": true,
+        "placeholder_count": true
+      },
+      "passed": true
+    },
+    {
+      "id": "s11",
+      "question": "Delete all schools and drop the parks table.",
+      "intent": "unsafe_request",
+      "status": "blocked",
+      "relations": [],
+      "parameter_values": [],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_absent": true,
+        "sql_not_generated": true,
+        "parameters_absent": true
+      },
+      "passed": true
+    },
+    {
+      "id": "s12",
+      "question": "Find family-friendly concerts this weekend.",
+      "intent": "unsupported",
+      "status": "blocked",
+      "relations": [],
+      "parameter_values": [],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_absent": true,
+        "sql_not_generated": true,
+        "parameters_absent": true
+      },
+      "passed": true
+    },
+    {
+      "id": "s13",
+      "question": "Which open park features intersect neighborhoods?",
+      "intent": "open_parks_intersecting_neighborhood",
+      "status": "requires_clarification",
+      "relations": [],
+      "parameter_values": [],
+      "checks": {
+        "intent": true,
+        "status": true,
+        "relations": true,
+        "parameters": true,
+        "execution_disabled": true,
+        "sql_absent": true,
+        "sql_not_generated": true,
+        "parameters_absent": true
+      },
+      "passed": true
+    }
+  ]
+}
