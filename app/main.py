@@ -21,9 +21,9 @@ def create_app() -> FastAPI:
         title=settings.app_name,
         version=settings.app_version,
         description=(
-            "Read-only relational and PostGIS API with Day 6 allowlisted schema "
-            "retrieval and typed query planning. The planner does not generate or "
-            "execute SQL; LLM-based generation is intentionally deferred."
+            "Read-only relational and PostGIS API with allowlisted schema retrieval, "
+            "typed query planning, and deterministic parameterized SQL generation. "
+            "Day 7 returns SQL for review but never executes generated SQL."
         ),
     )
 
