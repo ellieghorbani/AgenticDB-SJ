@@ -7,6 +7,7 @@ from psycopg import Connection
 
 from app.copilot.planner import RuleBasedQueryPlanner
 from app.copilot.schema_catalog import SchemaCatalogService
+from app.copilot.sql_generator import TemplateSQLGenerator
 from app.db.connection import get_db_connection
 from app.db.service import QueryService
 
@@ -36,3 +37,11 @@ def get_planner_service(
     """Create the deterministic Day 6 planner over the actual allowlisted schema."""
 
     return RuleBasedQueryPlanner(catalog_service.catalog())
+
+
+def get_sql_generator_service(
+    planner: Annotated[RuleBasedQueryPlanner, Depends(get_planner_service)],
+) -> TemplateSQLGenerator:
+    """Create the Day 7 non-executing SQL generator."""
+
+    return TemplateSQLGenerator(planner)

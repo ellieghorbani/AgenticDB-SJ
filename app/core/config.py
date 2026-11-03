@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     )
 
     app_name: str = "AgenticDB-SJ API"
-    app_version: str = "0.6.0"
+    app_version: str = "0.7.0"
     environment: str = "development"
 
     postgres_host: str = "127.0.0.1"
