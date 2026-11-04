@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     )
 
     app_name: str = "AgenticDB-SJ API"
-    app_version: str = "0.8.0"
+    app_version: str = "0.9.0"
     environment: str = "development"
 
     postgres_host: str = "127.0.0.1"
@@ -40,6 +40,7 @@ class Settings(BaseSettings):
     )
     copilot_lock_timeout_ms: int = Field(default=2000, ge=0, le=30000)
     copilot_max_result_rows: int = Field(default=1000, ge=1, le=5000)
+    agent_default_evidence_rows: int = Field(default=5, ge=0, le=20)
 
     api_host: str = "127.0.0.1"
     api_port: int = Field(default=8000, ge=1, le=65535)
