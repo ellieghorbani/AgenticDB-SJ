@@ -1,0 +1,118 @@
+{
+  "benchmark_name": "AgenticDB-SJ Day 9 Agent Routing and Tool-Use Benchmark",
+  "agent": "deterministic_agent_day9",
+  "expected_tool_sequence": [
+    "query.plan",
+    "route.select",
+    "sql.generate",
+    "sql.validate",
+    "sql.execute",
+    "answer.synthesize"
+  ],
+  "cases": [
+    {
+      "id": "g01",
+      "question": "How many active public schools are located in each neighborhood?",
+      "expected_intent": "schools_per_neighborhood",
+      "expected_route": "relational_sql",
+      "expected_status": "completed",
+      "expected_row_count": 297
+    },
+    {
+      "id": "g02",
+      "question": "Which neighborhoods intersect the most open park-dataset features?",
+      "expected_intent": "open_parks_per_neighborhood",
+      "expected_route": "relational_sql",
+      "expected_status": "completed",
+      "expected_row_count": 297
+    },
+    {
+      "id": "g03",
+      "question": "Which active elementary schools are within one mile of an open park feature?",
+      "expected_intent": "elementary_schools_near_open_parks",
+      "expected_route": "relational_sql",
+      "expected_status": "completed",
+      "expected_row_count": 131
+    },
+    {
+      "id": "g04",
+      "question": "What is the nearest open park feature to each active school?",
+      "expected_intent": "nearest_open_park_per_school",
+      "expected_route": "relational_sql",
+      "expected_status": "completed",
+      "expected_row_count": 220
+    },
+    {
+      "id": "g05",
+      "question": "Which open park features intersect the Almaden Lake neighborhood?",
+      "expected_intent": "open_parks_intersecting_neighborhood",
+      "expected_route": "relational_sql",
+      "expected_status": "completed",
+      "expected_row_count": 6
+    },
+    {
+      "id": "g06",
+      "question": "Which neighborhoods contain at least three active schools and two open park features?",
+      "expected_intent": "neighborhoods_with_minimum_schools_and_parks",
+      "expected_route": "relational_sql",
+      "expected_status": "completed",
+      "expected_row_count": 15
+    },
+    {
+      "id": "g07",
+      "question": "Which active schools have no open park feature within one mile?",
+      "expected_intent": "schools_without_nearby_open_park",
+      "expected_route": "relational_sql",
+      "expected_status": "completed",
+      "expected_row_count": 0
+    },
+    {
+      "id": "g08",
+      "question": "What is the average nearest-open-park distance for active schools by neighborhood?",
+      "expected_intent": "average_nearest_park_distance_by_neighborhood",
+      "expected_route": "relational_sql",
+      "expected_status": "completed",
+      "expected_row_count": 134
+    },
+    {
+      "id": "g09",
+      "question": "Which open park features have the most active schools within one mile?",
+      "expected_intent": "open_parks_with_most_nearby_schools",
+      "expected_route": "relational_sql",
+      "expected_status": "completed",
+      "expected_row_count": 20
+    },
+    {
+      "id": "g10",
+      "question": "Which neighborhoods contain both active elementary and active high-school records?",
+      "expected_intent": "neighborhoods_with_elementary_and_high_schools",
+      "expected_route": "relational_sql",
+      "expected_status": "completed",
+      "expected_row_count": 18
+    },
+    {
+      "id": "g11",
+      "question": "Delete all schools and drop the parks table.",
+      "expected_intent": "unsafe_request",
+      "expected_route": "blocked",
+      "expected_status": "blocked",
+      "expected_row_count": 0
+    },
+    {
+      "id": "g12",
+      "question": "Find family-friendly concerts this weekend.",
+      "expected_intent": "unsupported",
+      "expected_route": "unsupported",
+      "expected_status": "blocked",
+      "expected_row_count": 0
+    },
+    {
+      "id": "g13",
+      "question": "Which open park features intersect neighborhoods?",
+      "expected_intent": "open_parks_intersecting_neighborhood",
+      "expected_route": "requires_clarification",
+      "expected_status": "requires_clarification",
+      "expected_row_count": 0
+    }
+  ]
+}
