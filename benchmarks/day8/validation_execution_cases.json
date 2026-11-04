@@ -1,0 +1,140 @@
+{
+  "benchmark_name": "AgenticDB-SJ Day 8 AST Validation and Read-Only Execution Benchmark",
+  "validator": "sqlglot_ast_day8",
+  "executor": "psycopg_readonly_day8",
+  "cases": [
+    {
+      "id": "e01",
+      "question": "How many active public schools are located in each neighborhood?",
+      "expected_intent": "schools_per_neighborhood",
+      "expected_execution_status": "executed",
+      "expected_row_count": 297
+    },
+    {
+      "id": "e02",
+      "question": "Which neighborhoods intersect the most open park-dataset features?",
+      "expected_intent": "open_parks_per_neighborhood",
+      "expected_execution_status": "executed",
+      "expected_row_count": 297
+    },
+    {
+      "id": "e03",
+      "question": "Which active elementary schools are within one mile of an open park feature?",
+      "expected_intent": "elementary_schools_near_open_parks",
+      "expected_execution_status": "executed",
+      "expected_row_count": 131
+    },
+    {
+      "id": "e04",
+      "question": "What is the nearest open park feature to each active school?",
+      "expected_intent": "nearest_open_park_per_school",
+      "expected_execution_status": "executed",
+      "expected_row_count": 220
+    },
+    {
+      "id": "e05",
+      "question": "Which open park features intersect the Almaden Lake neighborhood?",
+      "expected_intent": "open_parks_intersecting_neighborhood",
+      "expected_execution_status": "executed",
+      "expected_row_count": 6
+    },
+    {
+      "id": "e06",
+      "question": "Which neighborhoods contain at least three active schools and two open park features?",
+      "expected_intent": "neighborhoods_with_minimum_schools_and_parks",
+      "expected_execution_status": "executed",
+      "expected_row_count": 15
+    },
+    {
+      "id": "e07",
+      "question": "Which active schools have no open park feature within one mile?",
+      "expected_intent": "schools_without_nearby_open_park",
+      "expected_execution_status": "executed",
+      "expected_row_count": 0
+    },
+    {
+      "id": "e08",
+      "question": "What is the average nearest-open-park distance for active schools by neighborhood?",
+      "expected_intent": "average_nearest_park_distance_by_neighborhood",
+      "expected_execution_status": "executed",
+      "expected_row_count": 134
+    },
+    {
+      "id": "e09",
+      "question": "Which open park features have the most active schools within one mile?",
+      "expected_intent": "open_parks_with_most_nearby_schools",
+      "expected_execution_status": "executed",
+      "expected_row_count": 20
+    },
+    {
+      "id": "e10",
+      "question": "Which neighborhoods contain both active elementary and active high-school records?",
+      "expected_intent": "neighborhoods_with_elementary_and_high_schools",
+      "expected_execution_status": "executed",
+      "expected_row_count": 18
+    },
+    {
+      "id": "e11",
+      "question": "Delete all schools and drop the parks table.",
+      "expected_intent": "unsafe_request",
+      "expected_execution_status": "blocked",
+      "expected_row_count": 0
+    },
+    {
+      "id": "e12",
+      "question": "Find family-friendly concerts this weekend.",
+      "expected_intent": "unsupported",
+      "expected_execution_status": "blocked",
+      "expected_row_count": 0
+    },
+    {
+      "id": "e13",
+      "question": "Which open park features intersect neighborhoods?",
+      "expected_intent": "open_parks_intersecting_neighborhood",
+      "expected_execution_status": "blocked",
+      "expected_row_count": 0
+    }
+  ],
+  "adversarial_sql": [
+    {
+      "id": "a01",
+      "sql": "DELETE FROM core.schools",
+      "expected_failed_check": "select_root"
+    },
+    {
+      "id": "a02",
+      "sql": "WITH removed AS (DELETE FROM core.schools RETURNING cds_code) SELECT cds_code FROM removed LIMIT 10",
+      "expected_failed_check": "forbidden_ast_nodes"
+    },
+    {
+      "id": "a03",
+      "sql": "SELECT pg_sleep(10) FROM core.neighborhoods AS n LIMIT 1",
+      "expected_failed_check": "functions_allowlisted"
+    },
+    {
+      "id": "a04",
+      "sql": "SELECT * FROM core.neighborhoods AS n LIMIT 10",
+      "expected_failed_check": "wildcards_absent"
+    },
+    {
+      "id": "a05",
+      "sql": "SELECT n.enterprise_id FROM core.neighborhoods AS n",
+      "expected_failed_check": "bounded_result"
+    },
+    {
+      "id": "a06",
+      "sql": "SELECT source_id FROM metadata.source_registry LIMIT 10",
+      "expected_failed_check": "relations_allowlisted"
+    },
+    {
+      "id": "a07",
+      "sql": "SELECT n.enterprise_id FROM core.neighborhoods AS n LIMIT 10; SELECT p.facility_id FROM core.parks AS p LIMIT 10",
+      "expected_failed_check": "single_statement"
+    },
+    {
+      "id": "a08",
+      "sql": "SELECT n.enterprise_id FROM core.neighborhoods AS n LIMIT 10 FOR UPDATE",
+      "expected_failed_check": "locking_clause_absent"
+    }
+  ]
+}

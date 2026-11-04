@@ -1,0 +1,286 @@
+{
+  "benchmark": "AgenticDB-SJ Day 8 AST Validation and Read-Only Execution Benchmark",
+  "passed": 21,
+  "total": 21,
+  "accuracy": 1.0,
+  "cases": [
+    {
+      "id": "e01",
+      "kind": "question",
+      "intent": "schools_per_neighborhood",
+      "validation_status": "valid",
+      "execution_allowed": true,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e02",
+      "kind": "question",
+      "intent": "open_parks_per_neighborhood",
+      "validation_status": "valid",
+      "execution_allowed": true,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e03",
+      "kind": "question",
+      "intent": "elementary_schools_near_open_parks",
+      "validation_status": "valid",
+      "execution_allowed": true,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e04",
+      "kind": "question",
+      "intent": "nearest_open_park_per_school",
+      "validation_status": "valid",
+      "execution_allowed": true,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e05",
+      "kind": "question",
+      "intent": "open_parks_intersecting_neighborhood",
+      "validation_status": "valid",
+      "execution_allowed": true,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e06",
+      "kind": "question",
+      "intent": "neighborhoods_with_minimum_schools_and_parks",
+      "validation_status": "valid",
+      "execution_allowed": true,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e07",
+      "kind": "question",
+      "intent": "schools_without_nearby_open_park",
+      "validation_status": "valid",
+      "execution_allowed": true,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e08",
+      "kind": "question",
+      "intent": "average_nearest_park_distance_by_neighborhood",
+      "validation_status": "valid",
+      "execution_allowed": true,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e09",
+      "kind": "question",
+      "intent": "open_parks_with_most_nearby_schools",
+      "validation_status": "valid",
+      "execution_allowed": true,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e10",
+      "kind": "question",
+      "intent": "neighborhoods_with_elementary_and_high_schools",
+      "validation_status": "valid",
+      "execution_allowed": true,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e11",
+      "kind": "question",
+      "intent": "unsafe_request",
+      "validation_status": "not_generated",
+      "execution_allowed": false,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e12",
+      "kind": "question",
+      "intent": "unsupported",
+      "validation_status": "not_generated",
+      "execution_allowed": false,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e13",
+      "kind": "question",
+      "intent": "open_parks_intersecting_neighborhood",
+      "validation_status": "not_generated",
+      "execution_allowed": false,
+      "checks": {
+        "intent": true,
+        "validation_status": true,
+        "execution_policy": true,
+        "all_checks": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a01",
+      "kind": "adversarial_sql",
+      "validation_status": "blocked",
+      "expected_failed_check": "select_root",
+      "checks": {
+        "blocked": true,
+        "status": true,
+        "expected_check_failed": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a02",
+      "kind": "adversarial_sql",
+      "validation_status": "blocked",
+      "expected_failed_check": "forbidden_ast_nodes",
+      "checks": {
+        "blocked": true,
+        "status": true,
+        "expected_check_failed": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a03",
+      "kind": "adversarial_sql",
+      "validation_status": "blocked",
+      "expected_failed_check": "functions_allowlisted",
+      "checks": {
+        "blocked": true,
+        "status": true,
+        "expected_check_failed": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a04",
+      "kind": "adversarial_sql",
+      "validation_status": "blocked",
+      "expected_failed_check": "wildcards_absent",
+      "checks": {
+        "blocked": true,
+        "status": true,
+        "expected_check_failed": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a05",
+      "kind": "adversarial_sql",
+      "validation_status": "blocked",
+      "expected_failed_check": "bounded_result",
+      "checks": {
+        "blocked": true,
+        "status": true,
+        "expected_check_failed": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a06",
+      "kind": "adversarial_sql",
+      "validation_status": "blocked",
+      "expected_failed_check": "relations_allowlisted",
+      "checks": {
+        "blocked": true,
+        "status": true,
+        "expected_check_failed": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a07",
+      "kind": "adversarial_sql",
+      "validation_status": "blocked",
+      "expected_failed_check": "single_statement",
+      "checks": {
+        "blocked": true,
+        "status": true,
+        "expected_check_failed": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a08",
+      "kind": "adversarial_sql",
+      "validation_status": "blocked",
+      "expected_failed_check": "locking_clause_absent",
+      "checks": {
+        "blocked": true,
+        "status": true,
+        "expected_check_failed": true
+      },
+      "passed": true
+    }
+  ]
+}

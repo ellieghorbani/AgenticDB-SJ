@@ -9,6 +9,7 @@ from app.api.routes import (
     parks,
     schools,
     snapshot,
+    sql_execution,
     sql_generation,
 )
 
@@ -20,3 +21,4 @@ api_router.include_router(schools.router)
 api_router.include_router(parks.router)
 api_router.include_router(copilot.router)
 api_router.include_router(sql_generation.router)
+api_router.include_router(sql_execution.router)

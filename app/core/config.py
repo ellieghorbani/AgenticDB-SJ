@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     )
 
     app_name: str = "AgenticDB-SJ API"
-    app_version: str = "0.7.0"
+    app_version: str = "0.8.0"
     environment: str = "development"
 
     postgres_host: str = "127.0.0.1"
@@ -28,6 +28,18 @@ class Settings(BaseSettings):
 
     database_connect_timeout_seconds: int = Field(default=5, ge=1, le=60)
     database_statement_timeout_ms: int = Field(default=5000, ge=100, le=120000)
+
+    copilot_execution_role: str = Field(
+        default="agenticdb_reader",
+        pattern=r"^[a-z_][a-z0-9_]*$",
+    )
+    copilot_execution_timeout_ms: int = Field(
+        default=15000,
+        ge=100,
+        le=120000,
+    )
+    copilot_lock_timeout_ms: int = Field(default=2000, ge=0, le=30000)
+    copilot_max_result_rows: int = Field(default=1000, ge=1, le=5000)
 
     api_host: str = "127.0.0.1"
     api_port: int = Field(default=8000, ge=1, le=65535)
