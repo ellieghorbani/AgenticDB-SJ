@@ -6,8 +6,10 @@ from fastapi import Depends
 from psycopg import Connection
 
 from app.core.config import Settings, get_settings
+from app.copilot.agent_orchestrator import AgentOrchestrator, LazyReadOnlySQLExecutor
+from app.copilot.answer_synthesis import DeterministicAnswerSynthesizer
 from app.copilot.planner import RuleBasedQueryPlanner
-from app.copilot.schema_catalog import SchemaCatalogService
+from app.copilot.schema_catalog import SchemaCatalogService, build_static_catalog
 from app.copilot.sql_execution import (
     CopilotExecutionService,
     ReadOnlySQLExecutor,
@@ -85,3 +87,23 @@ def get_copilot_execution_service(
 
     executor = ReadOnlySQLExecutor(connection, settings)
     return CopilotExecutionService(generator, validator, executor, settings)
+
+def get_agent_orchestrator(
+    settings: Annotated[Settings, Depends(get_settings)],
+) -> AgentOrchestrator:
+    """Create a lazy Day 9 agent; blocked routes never open PostgreSQL."""
+
+    catalog = build_static_catalog()
+    planner = RuleBasedQueryPlanner(catalog)
+    return AgentOrchestrator(
+        planner=planner,
+        generator=TemplateSQLGenerator(planner),
+        validator=SQLASTValidator(
+            catalog,
+            max_result_rows=settings.copilot_max_result_rows,
+        ),
+        executor=LazyReadOnlySQLExecutor(settings),
+        synthesizer=DeterministicAnswerSynthesizer(),
+        settings=settings,
+    )
+

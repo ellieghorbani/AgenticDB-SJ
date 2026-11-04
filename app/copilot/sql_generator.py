@@ -62,7 +62,14 @@ class TemplateSQLGenerator:
 
     def generate(self, question: str, top_k: int = 6) -> SQLGenerationResponse:
         plan_response = self.planner.plan(question, top_k=top_k)
-        plan = plan_response.plan
+        return self.generate_from_plan(plan_response.plan)
+
+    def generate_from_plan(self, plan: QueryPlan) -> SQLGenerationResponse:
+        """Generate SQL from an already validated typed plan.
+
+        Day 9 uses this method so the agent planner runs exactly once and the same
+        plan is preserved across generation, validation, execution, and tracing.
+        """
 
         if plan.intent in {PlannerIntent.unsafe_request, PlannerIntent.unsupported}:
             warning = (
