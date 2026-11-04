@@ -22,8 +22,9 @@ def create_app() -> FastAPI:
         version=settings.app_version,
         description=(
             "Read-only relational and PostGIS API with allowlisted schema retrieval, "
-            "typed query planning, and deterministic parameterized SQL generation. "
-            "Day 7 returns SQL for review but never executes generated SQL."
+            "typed planning, deterministic parameterized SQL generation, independent "
+            "SQLGlot AST validation, and controlled execution under a restricted "
+            "database role. Raw SQL is never accepted from API clients."
         ),
     )
 

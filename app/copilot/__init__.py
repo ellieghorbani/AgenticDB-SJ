@@ -1,12 +1,22 @@
-"""Schema retrieval, planning, and SQL generation for AgenticDB-SJ."""
+"""Schema retrieval, planning, SQL generation, validation, and execution."""
 
 from app.copilot.planner import RuleBasedQueryPlanner
 from app.copilot.schema_catalog import SchemaCatalogService, build_static_catalog
 from app.copilot.schema_retrieval import SchemaRetriever
+from app.copilot.sql_execution import (
+    CopilotExecutionService,
+    ReadOnlySQLExecutor,
+    SQLValidationService,
+)
 from app.copilot.sql_generator import TemplateSQLGenerator
+from app.copilot.sql_validator import SQLASTValidator
 
 __all__ = [
+    "CopilotExecutionService",
+    "ReadOnlySQLExecutor",
     "RuleBasedQueryPlanner",
+    "SQLASTValidator",
+    "SQLValidationService",
     "SchemaCatalogService",
     "SchemaRetriever",
     "TemplateSQLGenerator",
