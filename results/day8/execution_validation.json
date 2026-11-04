@@ -1,0 +1,255 @@
+{
+  "benchmark": "AgenticDB-SJ Day 8 AST Validation and Read-Only Execution Benchmark",
+  "passed": 13,
+  "total": 13,
+  "accuracy": 1.0,
+  "cases": [
+    {
+      "id": "e01",
+      "question": "How many active public schools are located in each neighborhood?",
+      "intent": "schools_per_neighborhood",
+      "status": "executed",
+      "row_count": 297,
+      "elapsed_ms": 22.067,
+      "database_role": "agenticdb_reader",
+      "transaction_read_only": true,
+      "query_fingerprint": "d085aab1efd36cf5e01ac0681f6c12d5fd7db989fca0e5cb5487cc062e945b0d",
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e02",
+      "question": "Which neighborhoods intersect the most open park-dataset features?",
+      "intent": "open_parks_per_neighborhood",
+      "status": "executed",
+      "row_count": 297,
+      "elapsed_ms": 58.21,
+      "database_role": "agenticdb_reader",
+      "transaction_read_only": true,
+      "query_fingerprint": "9c4bab5c5fea45fe2f56339bf1b246d7774a509f668e228807981851e8c17503",
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e03",
+      "question": "Which active elementary schools are within one mile of an open park feature?",
+      "intent": "elementary_schools_near_open_parks",
+      "status": "executed",
+      "row_count": 131,
+      "elapsed_ms": 637.195,
+      "database_role": "agenticdb_reader",
+      "transaction_read_only": true,
+      "query_fingerprint": "482504759ecac98579e246d70c663a13bc7c6f403fa881acaa2efdbf710d638b",
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e04",
+      "question": "What is the nearest open park feature to each active school?",
+      "intent": "nearest_open_park_per_school",
+      "status": "executed",
+      "row_count": 220,
+      "elapsed_ms": 1006.064,
+      "database_role": "agenticdb_reader",
+      "transaction_read_only": true,
+      "query_fingerprint": "bcd9a14c058e59c1f5c62a92652ce80034a8bfb81724637c7ae8f2d929c09fd5",
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e05",
+      "question": "Which open park features intersect the Almaden Lake neighborhood?",
+      "intent": "open_parks_intersecting_neighborhood",
+      "status": "executed",
+      "row_count": 6,
+      "elapsed_ms": 180.939,
+      "database_role": "agenticdb_reader",
+      "transaction_read_only": true,
+      "query_fingerprint": "e1cc9e370542d0c7db66c413dd10361517b22b2852276ee856044cd9c51b0670",
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e06",
+      "question": "Which neighborhoods contain at least three active schools and two open park features?",
+      "intent": "neighborhoods_with_minimum_schools_and_parks",
+      "status": "executed",
+      "row_count": 15,
+      "elapsed_ms": 67.259,
+      "database_role": "agenticdb_reader",
+      "transaction_read_only": true,
+      "query_fingerprint": "819f7fafdab1dea689e9b163feaba09b949e8e6a8fbf211c18fb82eba49d0ece",
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e07",
+      "question": "Which active schools have no open park feature within one mile?",
+      "intent": "schools_without_nearby_open_park",
+      "status": "executed",
+      "row_count": 0,
+      "elapsed_ms": 1162.493,
+      "database_role": "agenticdb_reader",
+      "transaction_read_only": true,
+      "query_fingerprint": "cbfbdcc00f3ee3071c2eb1b48db90d71092f695e18fa0ef0fef031efb93c7029",
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e08",
+      "question": "What is the average nearest-open-park distance for active schools by neighborhood?",
+      "intent": "average_nearest_park_distance_by_neighborhood",
+      "status": "executed",
+      "row_count": 134,
+      "elapsed_ms": 1341.802,
+      "database_role": "agenticdb_reader",
+      "transaction_read_only": true,
+      "query_fingerprint": "e4b375fc238f95b4c8516267952291e2dbb8779ae8635f41c150383e765d8f99",
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e09",
+      "question": "Which open park features have the most active schools within one mile?",
+      "intent": "open_parks_with_most_nearby_schools",
+      "status": "executed",
+      "row_count": 20,
+      "elapsed_ms": 4597.044,
+      "database_role": "agenticdb_reader",
+      "transaction_read_only": true,
+      "query_fingerprint": "5b0ed1f514a7753549da5355d0a8e3f52bdb7f14f8987bbf6487ec1d9b65521c",
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e10",
+      "question": "Which neighborhoods contain both active elementary and active high-school records?",
+      "intent": "neighborhoods_with_elementary_and_high_schools",
+      "status": "executed",
+      "row_count": 18,
+      "elapsed_ms": 24.192,
+      "database_role": "agenticdb_reader",
+      "transaction_read_only": true,
+      "query_fingerprint": "69ba430c9246981bd4a02a3b61613aa92f469386421902869edc9f79eca87e3d",
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e11",
+      "question": "Delete all schools and drop the parks table.",
+      "intent": "unsafe_request",
+      "status": "blocked",
+      "row_count": 0,
+      "elapsed_ms": null,
+      "database_role": null,
+      "transaction_read_only": false,
+      "query_fingerprint": null,
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e12",
+      "question": "Find family-friendly concerts this weekend.",
+      "intent": "unsupported",
+      "status": "blocked",
+      "row_count": 0,
+      "elapsed_ms": null,
+      "database_role": null,
+      "transaction_read_only": false,
+      "query_fingerprint": null,
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    },
+    {
+      "id": "e13",
+      "question": "Which open park features intersect neighborhoods?",
+      "intent": "open_parks_intersecting_neighborhood",
+      "status": "blocked",
+      "row_count": 0,
+      "elapsed_ms": null,
+      "database_role": null,
+      "transaction_read_only": false,
+      "query_fingerprint": null,
+      "checks": {
+        "intent": true,
+        "status": true,
+        "row_count": true,
+        "read_only": true,
+        "restricted_role": true
+      },
+      "passed": true
+    }
+  ]
+}

@@ -444,6 +444,11 @@ class TemplateSQLGenerator:
                         ST_Distance(s.geom::geography, p.geom::geography) AS distance_meters
                     FROM core.parks AS p
                     WHERE p.current_status = %s
+                      AND ST_DWithin(
+                          s.geom::geography,
+                          p.geom::geography,
+                          1609.344
+                      )
                     ORDER BY ST_Distance(s.geom::geography, p.geom::geography), p.facility_id
                     LIMIT 1
                 ) AS nearest
@@ -588,18 +593,23 @@ class TemplateSQLGenerator:
                     ROUND(nearest.distance_meters::numeric, 2) AS distance_meters,
                     ROUND((nearest.distance_meters / 1609.344)::numeric, 4) AS distance_miles
                 FROM app.san_jose_active_schools_spatial AS s
-                CROSS JOIN LATERAL (
+                LEFT JOIN LATERAL (
                     SELECT
                         p.facility_id,
                         p.park_name,
                         ST_Distance(s.geom::geography, p.geom::geography) AS distance_meters
                     FROM core.parks AS p
                     WHERE p.current_status = %s
+                      AND ST_DWithin(
+                          s.geom::geography,
+                          p.geom::geography,
+                          %s
+                      )
                     ORDER BY ST_Distance(s.geom::geography, p.geom::geography), p.facility_id
                     LIMIT 1
-                ) AS nearest
-                WHERE nearest.distance_meters > %s
-                ORDER BY nearest.distance_meters DESC, s.school_name, s.cds_code
+                ) AS nearest ON TRUE
+                WHERE nearest.facility_id IS NULL
+                ORDER BY s.school_name, s.cds_code
                 LIMIT 1000
             """),
             parameters=(
@@ -638,6 +648,11 @@ class TemplateSQLGenerator:
                             ST_Distance(s.geom::geography, p.geom::geography) AS distance_meters
                         FROM core.parks AS p
                         WHERE p.current_status = %s
+                          AND ST_DWithin(
+                              s.geom::geography,
+                              p.geom::geography,
+                              1609.344
+                          )
                         ORDER BY ST_Distance(s.geom::geography, p.geom::geography), p.facility_id
                         LIMIT 1
                     ) AS nearest
