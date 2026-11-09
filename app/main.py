@@ -25,7 +25,9 @@ def create_app() -> FastAPI:
             "typed planning, deterministic parameterized SQL generation, independent "
             "SQLGlot AST validation, controlled execution under a restricted "
             "database role, traced agent tool orchestration, and evidence-backed "
-            "answer synthesis. Raw SQL is never accepted from API clients."
+            "answer synthesis, plus local Sentence Transformer embeddings and "
+            "pgvector semantic/hybrid retrieval. Raw SQL is never accepted "
+            "from API clients."
         ),
     )
 

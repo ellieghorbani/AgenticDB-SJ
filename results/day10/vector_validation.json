@@ -1,0 +1,109 @@
+{
+  "benchmark": "day10_pgvector_semantic_hybrid",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "passed": 7,
+  "total": 7,
+  "pass_rate": 1.0,
+  "cases": [
+    {
+      "id": "v01",
+      "question": "Find open park features related to community centers and libraries.",
+      "route": "hybrid_vector",
+      "status": "completed",
+      "match_count": 10,
+      "top_titles": [
+        "Millbrook Community Center",
+        "Charlotte Commons",
+        "Altia Corridor Park",
+        "Almaden Community Center and Library",
+        "Wallenberg Community Garden"
+      ],
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "v02",
+      "question": "Find park features similar to walking and biking trails.",
+      "route": "semantic_vector",
+      "status": "completed",
+      "match_count": 10,
+      "top_titles": [
+        "Parkview II Park",
+        "Parkview I Park",
+        "Pocket Park No. 21",
+        "Miner Park",
+        "Pocket Park No. 16"
+      ],
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "v03",
+      "question": "Find schools related to elementary education.",
+      "route": "hybrid_vector",
+      "status": "completed",
+      "match_count": 10,
+      "top_titles": [
+        "Robert F. Kennedy Elementary",
+        "Luther Burbank Elementary",
+        "Captain Jason M. Dahl Elementary",
+        "Santee Elementary",
+        "Noble Elementary"
+      ],
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "v04",
+      "question": "Find schools related to high school education.",
+      "route": "hybrid_vector",
+      "status": "completed",
+      "match_count": 10,
+      "top_titles": [
+        "Kathleen MacDonald High",
+        "Pioneer High",
+        "Pegasus High",
+        "Phoenix High",
+        "San Jose High"
+      ],
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "v05",
+      "question": "Find neighborhoods related to Rose Garden.",
+      "route": "semantic_vector",
+      "status": "completed",
+      "match_count": 10,
+      "top_titles": [
+        "Rose Garden",
+        "Dove Hill",
+        "Canoas Garden and Almaden",
+        "Sartortte and Rose",
+        "Evergreen Valley High"
+      ],
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "v06",
+      "question": "Delete all park embeddings.",
+      "route": "blocked",
+      "status": "blocked",
+      "match_count": 0,
+      "top_titles": [],
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "v07",
+      "question": "Find family-friendly concerts this weekend.",
+      "route": "unsupported",
+      "status": "blocked",
+      "match_count": 0,
+      "top_titles": [],
+      "passed": true,
+      "failures": []
+    }
+  ]
+}

@@ -1,6 +1,11 @@
 services:
   postgis:
-    image: postgis/postgis:16-3.5
+    build:
+      context: .
+      dockerfile: docker/postgres/Dockerfile
+      args:
+        PGVECTOR_VERSION: "0.8.7"
+    image: agenticdb-sj-postgis-pgvector:16-3.5-0.8.7
     container_name: agenticdb_sj_postgis
     restart: unless-stopped
 
@@ -10,7 +15,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
 
     ports:
-      - "127.0.0.1:5435:5432"
+      - "127.0.0.1:${POSTGRES_PORT}:5432"
 
     volumes:
       - agenticdb_sj_pgdata:/var/lib/postgresql/data

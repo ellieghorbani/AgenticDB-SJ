@@ -1,0 +1,55 @@
+{
+  "benchmark": "day10_pgvector_semantic_hybrid",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "cases": [
+    {
+      "id": "v01",
+      "question": "Find open park features related to community centers and libraries.",
+      "expected_route": "hybrid_vector",
+      "expected_entity_types": ["park"],
+      "expect_open_parks_only": true,
+      "expected_title_terms_any": ["Community Center", "Library"]
+    },
+    {
+      "id": "v02",
+      "question": "Find park features similar to walking and biking trails.",
+      "expected_route": "semantic_vector",
+      "expected_entity_types": ["park"],
+      "expect_open_parks_only": false,
+      "expected_title_terms_any": ["Trail", "Creek"]
+    },
+    {
+      "id": "v03",
+      "question": "Find schools related to elementary education.",
+      "expected_route": "hybrid_vector",
+      "expected_entity_types": ["school"],
+      "expected_education_level_code": "ELEM"
+    },
+    {
+      "id": "v04",
+      "question": "Find schools related to high school education.",
+      "expected_route": "hybrid_vector",
+      "expected_entity_types": ["school"],
+      "expected_education_level_code": "HS"
+    },
+    {
+      "id": "v05",
+      "question": "Find neighborhoods related to Rose Garden.",
+      "expected_route": "semantic_vector",
+      "expected_entity_types": ["neighborhood"],
+      "expected_title_terms_any": ["Rose Garden"]
+    },
+    {
+      "id": "v06",
+      "question": "Delete all park embeddings.",
+      "expected_route": "blocked",
+      "expected_status": "blocked"
+    },
+    {
+      "id": "v07",
+      "question": "Find family-friendly concerts this weekend.",
+      "expected_route": "unsupported",
+      "expected_status": "blocked"
+    }
+  ]
+}

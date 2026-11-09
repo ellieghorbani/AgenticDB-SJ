@@ -8,6 +8,10 @@ from psycopg import Connection
 from app.core.config import Settings, get_settings
 from app.copilot.agent_orchestrator import AgentOrchestrator, LazyReadOnlySQLExecutor
 from app.copilot.answer_synthesis import DeterministicAnswerSynthesizer
+from app.copilot.embeddings import EmbeddingProvider, cached_embedding_provider
+from app.copilot.vector_orchestrator import VectorAgentOrchestrator
+from app.copilot.vector_router import DeterministicVectorRouter
+from app.copilot.vector_search import VectorSearchService
 from app.copilot.planner import RuleBasedQueryPlanner
 from app.copilot.schema_catalog import SchemaCatalogService, build_static_catalog
 from app.copilot.sql_execution import (
@@ -107,3 +111,41 @@ def get_agent_orchestrator(
         settings=settings,
     )
 
+
+
+def get_vector_router() -> DeterministicVectorRouter:
+    """Create the deterministic Day 10 semantic/hybrid router."""
+
+    return DeterministicVectorRouter()
+
+
+def get_embedding_provider(
+    settings: Annotated[Settings, Depends(get_settings)],
+) -> EmbeddingProvider:
+    """Return one process-cached local embedding model."""
+
+    return cached_embedding_provider(
+        settings.embedding_model_name,
+        settings.embedding_dimensions,
+        settings.embedding_device,
+        settings.embedding_batch_size,
+    )
+
+
+def get_vector_search_service(
+    connection: Annotated[Connection, Depends(get_db_connection)],
+    settings: Annotated[Settings, Depends(get_settings)],
+    embedder: Annotated[EmbeddingProvider, Depends(get_embedding_provider)],
+) -> VectorSearchService:
+    """Create a read-only pgvector search service."""
+
+    return VectorSearchService(connection, settings, embedder)
+
+
+def get_vector_orchestrator(
+    vector_router: Annotated[DeterministicVectorRouter, Depends(get_vector_router)],
+    search_service: Annotated[VectorSearchService, Depends(get_vector_search_service)],
+) -> VectorAgentOrchestrator:
+    """Create the Day 10 vector-search workflow."""
+
+    return VectorAgentOrchestrator(vector_router, search_service)
