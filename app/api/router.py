@@ -12,6 +12,7 @@ from app.api.routes import (
     snapshot,
     sql_execution,
     sql_generation,
+    vector,
 )
 
 api_router = APIRouter()
@@ -24,3 +25,5 @@ api_router.include_router(parks.router)
 api_router.include_router(copilot.router)
 api_router.include_router(sql_generation.router)
 api_router.include_router(sql_execution.router)
+
+api_router.include_router(vector.router)
