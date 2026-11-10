@@ -1,0 +1,139 @@
+{
+  "status": "ready",
+  "project": "AgenticDB-SJ",
+  "version": "1.0.0",
+  "generated_at": "2026-11-10T14:50:39.888840+00:00",
+  "all_benchmarks_passed": true,
+  "benchmark_count": 8,
+  "aggregate_passed": 102,
+  "aggregate_total": 102,
+  "aggregate_pass_rate": 1.0,
+  "benchmarks": [
+    {
+      "key": "day4_gold",
+      "label": "Human-reviewed SQL/PostGIS gold benchmark",
+      "source": "results/gold/day4/manifest.json",
+      "passed": 10,
+      "total": 10,
+      "pass_rate": 1.0,
+      "mean_latency_ms": 5727.995,
+      "p95_latency_ms": 15872.558
+    },
+    {
+      "key": "day6_planner",
+      "label": "Typed query planning",
+      "source": "results/day6/planner_validation.json",
+      "passed": 12,
+      "total": 12,
+      "pass_rate": 1.0,
+      "mean_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    {
+      "key": "day7_sql_generation",
+      "label": "Parameterized SQL generation",
+      "source": "results/day7/sql_generation_validation.json",
+      "passed": 13,
+      "total": 13,
+      "pass_rate": 1.0,
+      "mean_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    {
+      "key": "day8_ast",
+      "label": "AST safety validation",
+      "source": "results/day8/ast_validation.json",
+      "passed": 21,
+      "total": 21,
+      "pass_rate": 1.0,
+      "mean_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    {
+      "key": "day8_execution",
+      "label": "Restricted read-only execution",
+      "source": "results/day8/execution_validation.json",
+      "passed": 13,
+      "total": 13,
+      "pass_rate": 1.0,
+      "mean_latency_ms": 863.736,
+      "p95_latency_ms": 4302.514
+    },
+    {
+      "key": "day9_agent",
+      "label": "Agent routing and tool-use reliability",
+      "source": "results/day9/agent_validation.json",
+      "passed": 13,
+      "total": 13,
+      "pass_rate": 1.0,
+      "mean_latency_ms": 668.048,
+      "p95_latency_ms": 4366.258
+    },
+    {
+      "key": "day10_vector",
+      "label": "Semantic and hybrid vector retrieval",
+      "source": "results/day10/vector_validation.json",
+      "passed": 7,
+      "total": 7,
+      "pass_rate": 1.0,
+      "mean_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    {
+      "key": "day11_llm",
+      "label": "OpenAI structured planning",
+      "source": "results/day11/llm_validation.json",
+      "passed": 13,
+      "total": 13,
+      "pass_rate": 1.0,
+      "mean_latency_ms": 2408.196,
+      "p95_latency_ms": 6235.935
+    }
+  ],
+  "data_snapshot": {
+    "neighborhoods": 297,
+    "parks": 611,
+    "schools": 10537,
+    "schools_in_scope": 220,
+    "open_park_features": 526,
+    "semantic_documents": 1128,
+    "embedded_vectors": 2256,
+    "embedding_models": {
+      "openai:text-embedding-3-small:384": 1128,
+      "sentence-transformers/all-MiniLM-L6-v2": 1128
+    }
+  },
+  "database": {
+    "postgresql_version": "16.9 (Debian 16.9-1.pgdg110+1)",
+    "postgis_version": "3.5 USE_GEOS=1 USE_PROJ=1 USE_STATS=1",
+    "pgvector_version": "0.8.7",
+    "hnsw_index_present": true,
+    "execution_role": "agenticdb_reader"
+  },
+  "llm": {
+    "model": "gpt-5.6-terra",
+    "intent_accuracy": 1.0,
+    "deterministic_intent_accuracy": 0.6154,
+    "input_tokens": 13190,
+    "output_tokens": 1118,
+    "estimated_cost_usd": null
+  },
+  "embedding_comparison": {
+    "case_count": 5,
+    "mean_overlap_at_10": 2.0,
+    "mean_jaccard_at_10": 0.117,
+    "local_mean_latency_ms": 3.529,
+    "openai_mean_latency_ms": 5.729
+  },
+  "artifacts": {
+    "final_report": "docs/FINAL_REPORT.md",
+    "cv_bullets": "docs/CV_BULLETS.md",
+    "architecture": "docs/ARCHITECTURE.md",
+    "benchmark_csv": "results/day12/benchmark_summary.csv",
+    "manifest": "results/day12/release_manifest.json"
+  },
+  "notes": [
+    "All values were aggregated from committed benchmark artifacts and the live read-only database snapshot."
+  ],
+  "extra_metrics": {}
+}

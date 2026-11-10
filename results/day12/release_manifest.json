@@ -1,0 +1,47 @@
+{
+  "status": "ready",
+  "version": "1.0.0",
+  "generated_at": "2026-11-10T14:50:39.890652+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "b48741b50404bd97b6534ded07025d606089ee9012739340c51de9d343bf67b4",
+      "bytes": 4683
+    },
+    {
+      "path": "docs/FINAL_REPORT.md",
+      "sha256": "57dee7df8a0d32161a3ae941bba4e55f6fef7acab02316d81ce078da409fea3e",
+      "bytes": 3491
+    },
+    {
+      "path": "docs/CV_BULLETS.md",
+      "sha256": "b2a92282f938ac2d0b233e35d7ba0bad171cc0306bf0aad816197323021eded1",
+      "bytes": 1931
+    },
+    {
+      "path": "results/day12/final_evaluation.json",
+      "sha256": "73f2afe26a66e7789fdcb3984b78e7ee6c3503ccec5be11ff4c89436f7185f2e",
+      "bytes": 3880
+    },
+    {
+      "path": "results/day12/benchmark_summary.csv",
+      "sha256": "e76ad1bde677eb7e7ee7f5c17fe07540ff6c6fe13c537bc9e49074d11fe08f07",
+      "bytes": 877
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "f18db9d49a48cc23914c2a0824ace51c61eb21199088776ea86fe81b8a0d50f3",
+      "bytes": 1882
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "15a094af426a9700fdb56b1adf47925a084cfa0a7e1b4b3a0ea401d0a74663bc",
+      "bytes": 869
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "cd2ef2cd42dc1044327edf3230e1709c1beb893bcb62f8a3de0078c5ec4578ed",
+      "bytes": 631
+    }
+  ]
+}
