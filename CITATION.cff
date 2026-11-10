@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use AgenticDB-SJ, please cite this software."
+title: "AgenticDB-SJ: Natural-Language Database Copilot"
+type: software
+authors:
+  - family-names: "Ghorbani"
+    given-names: "Elaheh"
+version: "1.0.0"
+date-released: "2026-11-10"
+repository-code: "https://github.com/ellieghorbani/AgenticDB-SJ"
+abstract: >
+  A provenance-aware natural-language database copilot over real relational,
+  geospatial, and vector data using PostgreSQL, PostGIS, pgvector, FastAPI,
+  OpenAI structured planning, deterministic SQL templates, AST validation,
+  restricted read-only execution, and evidence-backed answers.

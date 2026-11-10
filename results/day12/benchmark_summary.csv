@@ -1,0 +1,9 @@
+key,label,source,passed,total,pass_rate,mean_latency_ms,p95_latency_ms
+day4_gold,Human-reviewed SQL/PostGIS gold benchmark,results/gold/day4/manifest.json,10,10,1.0,5727.995,15872.558
+day6_planner,Typed query planning,results/day6/planner_validation.json,12,12,1.0,,
+day7_sql_generation,Parameterized SQL generation,results/day7/sql_generation_validation.json,13,13,1.0,,
+day8_ast,AST safety validation,results/day8/ast_validation.json,21,21,1.0,,
+day8_execution,Restricted read-only execution,results/day8/execution_validation.json,13,13,1.0,863.736,4302.514
+day9_agent,Agent routing and tool-use reliability,results/day9/agent_validation.json,13,13,1.0,668.048,4366.258
+day10_vector,Semantic and hybrid vector retrieval,results/day10/vector_validation.json,7,7,1.0,,
+day11_llm,OpenAI structured planning,results/day11/llm_validation.json,13,13,1.0,2408.196,6235.935
