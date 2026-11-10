@@ -8,10 +8,13 @@ from psycopg import Connection
 from app.core.config import Settings, get_settings
 from app.copilot.agent_orchestrator import AgentOrchestrator, LazyReadOnlySQLExecutor
 from app.copilot.answer_synthesis import DeterministicAnswerSynthesizer
-from app.copilot.embeddings import EmbeddingProvider, cached_embedding_provider
-from app.copilot.vector_orchestrator import VectorAgentOrchestrator
-from app.copilot.vector_router import DeterministicVectorRouter
-from app.copilot.vector_search import VectorSearchService
+from app.copilot.embeddings import (
+    EmbeddingProvider,
+    cached_configured_embedding_provider,
+)
+from app.copilot.llm_orchestrator import LLMAssistedAgentOrchestrator
+from app.copilot.llm_planner import LLMAssistedPlanningService
+from app.copilot.llm_provider import cached_openai_planning_provider
 from app.copilot.planner import RuleBasedQueryPlanner
 from app.copilot.schema_catalog import SchemaCatalogService, build_static_catalog
 from app.copilot.sql_execution import (
@@ -21,6 +24,9 @@ from app.copilot.sql_execution import (
 )
 from app.copilot.sql_generator import TemplateSQLGenerator
 from app.copilot.sql_validator import SQLASTValidator
+from app.copilot.vector_orchestrator import VectorAgentOrchestrator
+from app.copilot.vector_router import DeterministicVectorRouter
+from app.copilot.vector_search import VectorSearchService
 from app.db.connection import get_db_connection
 from app.db.service import QueryService
 
@@ -92,6 +98,7 @@ def get_copilot_execution_service(
     executor = ReadOnlySQLExecutor(connection, settings)
     return CopilotExecutionService(generator, validator, executor, settings)
 
+
 def get_agent_orchestrator(
     settings: Annotated[Settings, Depends(get_settings)],
 ) -> AgentOrchestrator:
@@ -112,7 +119,6 @@ def get_agent_orchestrator(
     )
 
 
-
 def get_vector_router() -> DeterministicVectorRouter:
     """Create the deterministic Day 10 semantic/hybrid router."""
 
@@ -122,13 +128,20 @@ def get_vector_router() -> DeterministicVectorRouter:
 def get_embedding_provider(
     settings: Annotated[Settings, Depends(get_settings)],
 ) -> EmbeddingProvider:
-    """Return one process-cached local embedding model."""
+    """Return the configured local or OpenAI embedding provider."""
 
-    return cached_embedding_provider(
+    api_key = settings.openai_api_key_value
+    return cached_configured_embedding_provider(
+        settings.embedding_provider,
         settings.embedding_model_name,
         settings.embedding_dimensions,
         settings.embedding_device,
         settings.embedding_batch_size,
+        api_key,
+        settings.openai_embedding_model,
+        settings.openai_embedding_dimensions,
+        settings.openai_embedding_batch_size,
+        settings.openai_llm_timeout_seconds,
     )
 
 
@@ -149,3 +162,53 @@ def get_vector_orchestrator(
     """Create the Day 10 vector-search workflow."""
 
     return VectorAgentOrchestrator(vector_router, search_service)
+
+
+def get_llm_planning_service(
+    settings: Annotated[Settings, Depends(get_settings)],
+) -> LLMAssistedPlanningService:
+    """Create the Day 11 structured OpenAI planning service."""
+
+    catalog = build_static_catalog()
+    deterministic = RuleBasedQueryPlanner(catalog)
+    provider = None
+    if settings.openai_api_key_configured:
+        provider = cached_openai_planning_provider(
+            settings.openai_api_key_value,
+            settings.openai_llm_model,
+            settings.openai_llm_timeout_seconds,
+            settings.openai_llm_max_output_tokens,
+            settings.openai_input_cost_per_million,
+            settings.openai_output_cost_per_million,
+        )
+    return LLMAssistedPlanningService(
+        deterministic,
+        catalog,
+        provider=provider,
+        default_provider=settings.planning_provider,
+        fallback_to_deterministic=settings.openai_fallback_to_deterministic,
+    )
+
+
+def get_llm_agent_orchestrator(
+    settings: Annotated[Settings, Depends(get_settings)],
+    planning_service: Annotated[
+        LLMAssistedPlanningService,
+        Depends(get_llm_planning_service),
+    ],
+) -> LLMAssistedAgentOrchestrator:
+    """Create the Day 11 LLM-assisted agent over existing safety layers."""
+
+    catalog = build_static_catalog()
+    deterministic = RuleBasedQueryPlanner(catalog)
+    return LLMAssistedAgentOrchestrator(
+        planning_service=planning_service,
+        generator=TemplateSQLGenerator(deterministic),
+        validator=SQLASTValidator(
+            catalog,
+            max_result_rows=settings.copilot_max_result_rows,
+        ),
+        executor=LazyReadOnlySQLExecutor(settings),
+        synthesizer=DeterministicAnswerSynthesizer(),
+        settings=settings,
+    )

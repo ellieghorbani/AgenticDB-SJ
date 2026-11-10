@@ -1,9 +1,10 @@
 """Database-backed schema catalog limited by the curated allowlist."""
 
 from collections import defaultdict
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
-from psycopg import Connection
+if TYPE_CHECKING:
+    from psycopg import Connection
 
 from app.copilot.schema_registry import JOINS, RELATIONS
 from app.models.copilot import (
@@ -40,7 +41,7 @@ ORDER BY
 class SchemaCatalogService:
     """Read actual relation metadata and merge it with semantic descriptions."""
 
-    def __init__(self, connection: Connection):
+    def __init__(self, connection: "Connection"):
         self.connection = connection
 
     def catalog(self) -> SchemaCatalogResponse:

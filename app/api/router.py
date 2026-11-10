@@ -6,6 +6,7 @@ from app.api.routes import (
     agent,
     copilot,
     health,
+    llm,
     neighborhoods,
     parks,
     schools,
@@ -17,6 +18,7 @@ from app.api.routes import (
 
 api_router = APIRouter()
 api_router.include_router(agent.router)
+api_router.include_router(llm.router)
 api_router.include_router(health.router)
 api_router.include_router(snapshot.router)
 api_router.include_router(neighborhoods.router)

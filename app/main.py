@@ -21,12 +21,12 @@ def create_app() -> FastAPI:
         title=settings.app_name,
         version=settings.app_version,
         description=(
-            "Read-only relational and PostGIS API with allowlisted schema retrieval, "
-            "typed planning, deterministic parameterized SQL generation, independent "
-            "SQLGlot AST validation, controlled execution under a restricted "
-            "database role, traced agent tool orchestration, and evidence-backed "
-            "answer synthesis, plus local Sentence Transformer embeddings and "
-            "pgvector semantic/hybrid retrieval. Raw SQL is never accepted "
+            "Read-only relational, spatial, and vector database copilot with "
+            "allowlisted schema retrieval, deterministic and OpenAI-assisted "
+            "typed planning, parameterized SQL generation, independent SQLGlot "
+            "AST validation, restricted-role execution, traced tool orchestration, "
+            "evidence-backed answers, and configurable local or OpenAI embeddings. "
+            "Hosted models never authorize execution and raw SQL is never accepted "
             "from API clients."
         ),
     )
