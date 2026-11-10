@@ -19,15 +19,15 @@ def create_app() -> FastAPI:
     settings = get_settings()
     application = FastAPI(
         title=settings.app_name,
-        version=settings.app_version,
+        version=__version__,
         description=(
-            "Read-only relational, spatial, and vector database copilot with "
-            "allowlisted schema retrieval, deterministic and OpenAI-assisted "
-            "typed planning, parameterized SQL generation, independent SQLGlot "
-            "AST validation, restricted-role execution, traced tool orchestration, "
-            "evidence-backed answers, and configurable local or OpenAI embeddings. "
-            "Hosted models never authorize execution and raw SQL is never accepted "
-            "from API clients."
+            "Provenance-aware natural-language database copilot over real "
+            "relational, geospatial, and vector data. AgenticDB-SJ combines "
+            "OpenAI structured planning, allowlisted deterministic SQL, "
+            "independent SQLGlot AST validation, restricted read-only "
+            "PostgreSQL/PostGIS execution, pgvector HNSW retrieval, traced "
+            "tool orchestration, and evidence-backed answers. Raw SQL is "
+            "never accepted from API clients."
         ),
     )
 
