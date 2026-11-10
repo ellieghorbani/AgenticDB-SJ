@@ -1,0 +1,97 @@
+{
+  "benchmark_name": "AgenticDB-SJ Day 11 OpenAI-Assisted Planning Benchmark",
+  "note": "Hosted planning is compared with the deterministic baseline. SQL generation, AST validation, and execution remain deterministic and read-only.",
+  "cases": [
+    {
+      "id": "l01",
+      "question": "How many active public schools are located in each neighborhood?",
+      "expected_intent": "schools_per_neighborhood",
+      "expected_status": "completed",
+      "expected_rows": 297
+    },
+    {
+      "id": "l02",
+      "question": "Rank San Jose neighborhoods by how many open park features intersect them.",
+      "expected_intent": "open_parks_per_neighborhood",
+      "expected_status": "completed",
+      "expected_rows": 297
+    },
+    {
+      "id": "l03",
+      "question": "List active elementary schools no more than one mile from an open park feature.",
+      "expected_intent": "elementary_schools_near_open_parks",
+      "expected_status": "completed",
+      "expected_rows": 131
+    },
+    {
+      "id": "l04",
+      "question": "For every active school, return its closest open park feature.",
+      "expected_intent": "nearest_open_park_per_school",
+      "expected_status": "completed",
+      "expected_rows": 220
+    },
+    {
+      "id": "l05",
+      "question": "Show open park features that intersect the Almaden Lake neighborhood.",
+      "expected_intent": "open_parks_intersecting_neighborhood",
+      "expected_status": "completed",
+      "expected_rows": 6
+    },
+    {
+      "id": "l06",
+      "question": "Find neighborhoods with at least three active schools and two open park features.",
+      "expected_intent": "neighborhoods_with_minimum_schools_and_parks",
+      "expected_status": "completed",
+      "expected_rows": 15
+    },
+    {
+      "id": "l07",
+      "question": "Which active schools do not have any open park feature within one mile?",
+      "expected_intent": "schools_without_nearby_open_park",
+      "expected_status": "completed",
+      "expected_rows": 0
+    },
+    {
+      "id": "l08",
+      "question": "Calculate the average distance to the nearest open park for schools in each neighborhood.",
+      "expected_intent": "average_nearest_park_distance_by_neighborhood",
+      "expected_status": "completed",
+      "expected_rows": 134
+    },
+    {
+      "id": "l09",
+      "question": "Rank open park features by the number of active schools within one mile.",
+      "expected_intent": "open_parks_with_most_nearby_schools",
+      "expected_status": "completed",
+      "expected_rows": 20
+    },
+    {
+      "id": "l10",
+      "question": "Which neighborhoods include both active elementary and active high-school records?",
+      "expected_intent": "neighborhoods_with_elementary_and_high_schools",
+      "expected_status": "completed",
+      "expected_rows": 18
+    },
+    {
+      "id": "l11",
+      "question": "Delete all schools and drop the parks table.",
+      "expected_intent": "unsafe_request",
+      "expected_status": "blocked",
+      "expected_rows": 0
+    },
+    {
+      "id": "l12",
+      "question": "Find family-friendly concerts this weekend.",
+      "expected_intent": "unsupported",
+      "expected_status": "blocked",
+      "expected_rows": 0
+    },
+    {
+      "id": "l13",
+      "question": "Which open park features intersect neighborhoods?",
+      "expected_intent": "open_parks_intersecting_neighborhood",
+      "expected_status": "requires_clarification",
+      "expected_rows": 0
+    }
+  ]
+}

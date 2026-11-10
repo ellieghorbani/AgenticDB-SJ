@@ -1,0 +1,94 @@
+{
+  "local_status": {
+    "status": "ready",
+    "provider": "sentence_transformers_pgvector_day10",
+    "extension_version": "0.8.7",
+    "document_count": 1128,
+    "embedded_document_count": 1128,
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "embedding_dimensions": 384,
+    "entity_counts": {
+      "neighborhood": 297,
+      "park": 611,
+      "school": 220
+    },
+    "hnsw_index_present": true
+  },
+  "openai_status": {
+    "status": "ready",
+    "provider": "openai_embeddings_day11",
+    "extension_version": "0.8.7",
+    "document_count": 1128,
+    "embedded_document_count": 1128,
+    "embedding_model": "openai:text-embedding-3-small:384",
+    "embedding_dimensions": 384,
+    "entity_counts": {
+      "neighborhood": 297,
+      "park": 611,
+      "school": 220
+    },
+    "hnsw_index_present": true
+  },
+  "results": [
+    {
+      "id": "v01",
+      "question": "Find open park features related to community centers and libraries.",
+      "local_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "openai_model": "openai:text-embedding-3-small:384",
+      "local_elapsed_ms": 7.925,
+      "openai_elapsed_ms": 6.25,
+      "overlap_at_10": 1,
+      "jaccard_at_10": 0.0526,
+      "local_top_title": "Millbrook Community Center",
+      "openai_top_title": "Educational Park Branch Library"
+    },
+    {
+      "id": "v02",
+      "question": "Find park features similar to walking and biking trails.",
+      "local_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "openai_model": "openai:text-embedding-3-small:384",
+      "local_elapsed_ms": 6.088,
+      "openai_elapsed_ms": 22.429,
+      "overlap_at_10": 1,
+      "jaccard_at_10": 0.0526,
+      "local_top_title": "Parkview II Park",
+      "openai_top_title": "Component Creek Trail - Reach 03 (COM03)"
+    },
+    {
+      "id": "v03",
+      "question": "Find schools related to elementary education.",
+      "local_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "openai_model": "openai:text-embedding-3-small:384",
+      "local_elapsed_ms": 2.911,
+      "openai_elapsed_ms": 5.526,
+      "overlap_at_10": 1,
+      "jaccard_at_10": 0.0526,
+      "local_top_title": "Robert F. Kennedy Elementary",
+      "openai_top_title": "Edenvale Elementary"
+    },
+    {
+      "id": "v04",
+      "question": "Find schools related to high school education.",
+      "local_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "openai_model": "openai:text-embedding-3-small:384",
+      "local_elapsed_ms": 1.999,
+      "openai_elapsed_ms": 5.525,
+      "overlap_at_10": 4,
+      "jaccard_at_10": 0.25,
+      "local_top_title": "Kathleen MacDonald High",
+      "openai_top_title": "Oak Grove High"
+    },
+    {
+      "id": "v05",
+      "question": "Find neighborhoods related to Rose Garden.",
+      "local_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "openai_model": "openai:text-embedding-3-small:384",
+      "local_elapsed_ms": 1.583,
+      "openai_elapsed_ms": 1.324,
+      "overlap_at_10": 3,
+      "jaccard_at_10": 0.1765,
+      "local_top_title": "Rose Garden",
+      "openai_top_title": "Rose Garden"
+    }
+  ]
+}

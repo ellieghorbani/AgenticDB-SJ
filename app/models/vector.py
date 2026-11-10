@@ -97,9 +97,7 @@ class VectorMatch(APIModel):
 
 
 class VectorSearchResponse(APIModel):
-    provider: Literal["sentence_transformers_pgvector_day10"] = (
-        "sentence_transformers_pgvector_day10"
-    )
+    provider: str = "sentence_transformers_pgvector_day10"
     model: str
     dimensions: int = Field(ge=1)
     query: str
@@ -117,6 +115,7 @@ class VectorSearchResponse(APIModel):
 
 class VectorStatusResponse(APIModel):
     status: Literal["ready"]
+    provider: str = "sentence_transformers_pgvector_day10"
     extension_version: str
     document_count: int = Field(ge=0)
     embedded_document_count: int = Field(ge=0)

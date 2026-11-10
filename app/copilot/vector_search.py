@@ -95,7 +95,7 @@ class VectorSearchService:
                 FROM semantic.entity_documents
                 WHERE embedding_model = %s
                 """,
-                (self.settings.embedding_model_name,),
+                (self.embedder.model_name,),
             )
             totals = cursor.fetchone()
             assert totals is not None
@@ -108,7 +108,7 @@ class VectorSearchService:
                 GROUP BY entity_type
                 ORDER BY entity_type
                 """,
-                (self.settings.embedding_model_name,),
+                (self.embedder.model_name,),
             )
             entity_counts = {
                 str(row["entity_type"]): int(row["count"])
@@ -130,11 +130,12 @@ class VectorSearchService:
 
         return VectorStatusResponse(
             status="ready",
+            provider=self.embedder.provider_name,
             extension_version=str(extension["extversion"]),
             document_count=int(totals["document_count"]),
             embedded_document_count=int(totals["embedded_document_count"]),
-            embedding_model=self.settings.embedding_model_name,
-            embedding_dimensions=self.settings.embedding_dimensions,
+            embedding_model=self.embedder.model_name,
+            embedding_dimensions=self.embedder.dimensions,
             entity_counts=entity_counts,
             hnsw_index_present=bool(index_row["present"]),
         )
@@ -180,7 +181,7 @@ class VectorSearchService:
                 _SEARCH_SQL,
                 (
                     query_vector,
-                    self.settings.embedding_model_name,
+                    self.embedder.model_name,
                     entity_types,
                     request.only_open_parks,
                     request.education_level_code,
@@ -206,8 +207,9 @@ class VectorSearchService:
             for row in rows
         ]
         return VectorSearchResponse(
-            model=self.settings.embedding_model_name,
-            dimensions=self.settings.embedding_dimensions,
+            provider=self.embedder.provider_name,
+            model=self.embedder.model_name,
+            dimensions=self.embedder.dimensions,
             query=request.query,
             entity_types=list(request.entity_types),
             only_open_parks=request.only_open_parks,
