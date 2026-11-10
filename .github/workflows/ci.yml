@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  application-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+          cache: pip
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+      - name: Compile
+        env:
+          POSTGRES_PASSWORD: ci-placeholder
+        run: python -m compileall -q app scripts
+      - name: Run database-independent tests
+        env:
+          POSTGRES_PASSWORD: ci-placeholder
+        run: |
+          python -m pytest -q \
+            tests/api \
+            tests/copilot
